@@ -11,7 +11,11 @@ var button_audio=new Audio("https://monoame.com/awi_class/ballsound/click14.wav"
 
 var screen_audio=new Audio("https://monoame.com/awi_class/ballsound/click18.wav");
 
-var take_a_picture_audio=new Audio("https://youtu.be/S17NdSVIa5k");
+var take_a_picture_audio=new Audio("https://xiang82114.github.io/MyWeb/media/camera.mp3");
+
+var message_audio=new Audio("https://xiang82114.github.io/MyWeb/media/message.mp3");
+
+var phone_audio=new Audio("https://xiang82114.github.io/MyWeb/media/phone.mp3");
 
 var home_audio=new Audio("https://monoame.com/awi_class/ballsound/click23.wav");
 
@@ -23,7 +27,7 @@ function PrefixInteger(num, length) {
 }  
 setInterval(
   function(){  
-    nowtime+=1;
+    nowtime+=1;    
     $(".hr").text(PrefixInteger(hr,2));
     if(nowtime<10){
       $(".st_time").text(hr+":0"+nowtime+" AM");
@@ -42,8 +46,10 @@ setInterval(
     {
       $(".tel_status").text("撥號中..."); 
     } 
-    if(nowtime==59){
+    if(nowtime==59){      
       nowtime=-1;
+      $('.numicon').removeClass('hide');
+      playSound();
       hr++;     
     }
     if(hr==24){
@@ -52,6 +58,10 @@ setInterval(
     }
   } 
 ,1000);
+
+function playSound() {
+  message_audio.play();
+}
 
 $(".app8").click(
   function(){
@@ -98,7 +108,7 @@ $(".camera_btn").click(
   function(){
     $(".screen").addClass("lighten");
     
-    button_audio.play(); 
+    take_a_picture_audio.play(); 
     setTimeout(function () { 
     $(".screen").removeClass("lighten");
     $(".photo").addClass("hasphoto");
@@ -150,9 +160,12 @@ $(".speakerphone").click(
     if(mute==false){
       $(this).css("color","white");
       mute=true;
+      phone_audio.play();
     }else{
       $(this).css("color","#333");
       mute=false;
+      phone_audio.pause();
+      phone_audio.currentTime = 0;
     }
 });
 $(".weatherbox").click(
@@ -169,4 +182,11 @@ $(".weatherbox").click(
       showdayweather=false;
     }
     
+});
+
+
+$(".app5").click(
+  function(){    
+    $('.numicon').addClass('hide');
+    message_audio.play();
 });

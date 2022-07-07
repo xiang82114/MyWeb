@@ -656,11 +656,31 @@ body, html {
 .phone .hxc .screen .apps .app1 {
   background-image: url("https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Actions-help-about-icon.png");
 }
+.phone .hxc .screen .apps .app2, .phone .hxc .screen .apps .app3 {
+  cursor: default;
+  pointer-events: none;
+}
 .phone .hxc .screen .apps .app4 {
   background-image: url("https://play-lh.googleusercontent.com/E8abWF0D4nt9Il12VRFBqWkqawYF2g7vPmyspPOYqXzh9PH8VWDdT0hIF9viC5le-Lc");
 }
 .phone .hxc .screen .apps .app5 {
   background-image: url("https://findicons.com/files/icons/2382/htc_sense_ui_2_1_icons/128/htc_sense_text_icon.png");
+}
+.phone .hxc .screen .apps .app5 .numicon {
+  position: absolute;
+  right: -5px;
+  bottom: 8px;
+  background-color: #1780f9;
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  font-size: 7px;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+}
+.phone .hxc .screen .apps .app5 .hide {
+  display: none;
 }
 .phone .hxc .screen .apps .app6 {
   background-image: url("https://findicons.com/files/icons/2382/htc_sense_ui_2_1_icons/128/htc_sense_email_icon.png");
