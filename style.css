@@ -1,0 +1,967 @@
+@charset "UTF-8";
+* {
+  font-family: 微軟正黑體;
+  position: relative;
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.phone {
+  width: 410px;
+  height: 700px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #343432, #131512, #0d0d0d);
+  border-radius: 100px/65px;
+  box-shadow: 4px 4px 5px 5px rgba(19, 21, 18, 0.3);
+}
+.phone .top {
+  top: 5px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phone .top .listener {
+  width: 200px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #333;
+  border: 1px solid white;
+  box-shadow: 1px 1px 2px 2px rgba(255, 255, 255, 0.8);
+}
+.phone .top .camera {
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  background-color: black;
+  border: 1px solid white;
+  margin-left: 15px;
+  top: 2px;
+  box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.8);
+}
+.phone .hxc {
+  width: 350px;
+  height: 600px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #000;
+  border-radius: 50px/40px;
+  background: linear-gradient(100deg, #626262, #515250, #434642, #0d0d0d, #000000);
+  box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.3);
+}
+.phone .hxc .name {
+  z-index: 10;
+  text-align: center;
+  color: cmyk(4, 0, 5, 3);
+  color: #f0f5f5;
+  filter: brightness(1.75);
+  top: -18px;
+  font-size: 20px;
+}
+.phone .hxc .name .t {
+  font-size: 16px;
+  font-weight: bold;
+}
+.phone .hxc .name .c {
+  top: 2px;
+}
+.phone .hxc .screen {
+  width: 330px;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  top: 6%;
+  transform: translateX(-50%);
+  box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+}
+.phone .hxc .screen .page {
+  width: 100%;
+  height: 100%;
+}
+.phone .hxc .screen .page .status {
+  width: 100%;
+  height: 20px;
+  background-color: black;
+  position: absolute;
+  text-align: right;
+  vertical-align: top;
+}
+.phone .hxc .screen .page .status h3 {
+  font-size: 12px;
+  display: inline-block;
+  color: white;
+  margin: 2px 5px;
+}
+.phone .hxc .screen .page .status .signal {
+  color: white;
+  margin-right: 10px;
+  font-size: 12px;
+}
+.phone .hxc .screen .page .status .battery {
+  transform: rotate(180deg);
+  color: green;
+  display: inline-block;
+}
+.phone .hxc .screen .weatherbox {
+  width: 300px;
+  max-width: 300px;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  height: 160px;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.phone .hxc .screen .weatherbox .timer {
+  height: 80px;
+}
+.phone .hxc .screen .weatherbox .timer h1 {
+  font-size: 80px;
+  margin: 0;
+  background-color: white;
+  border-radius: 10px;
+}
+.phone .hxc .screen .weatherbox .timer span {
+  font-size: 12px;
+  background-color: white;
+}
+.phone .hxc .screen .weatherbox .timer .hour {
+  position: absolute;
+  left: 12%;
+  top: -20px;
+  box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.3);
+}
+.phone .hxc .screen .weatherbox .timer .hour:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 106px;
+  width: 96px;
+  top: -5px;
+  background-color: #eee;
+  border-radius: 10px;
+}
+.phone .hxc .screen .weatherbox .timer .hour:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 96px;
+  position: absolute;
+  background-color: #666;
+  top: 53px;
+  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.8);
+}
+.phone .hxc .screen .weatherbox .timer .min {
+  position: absolute;
+  right: 12%;
+  top: -20px;
+}
+.phone .hxc .screen .weatherbox .timer .min:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 106px;
+  width: 96px;
+  top: -5px;
+  background-color: #eee;
+  border-radius: 10px;
+  box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.3);
+}
+.phone .hxc .screen .weatherbox .timer .min:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 96px;
+  position: absolute;
+  background-color: #666;
+  top: 53px;
+  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.8);
+}
+.phone .hxc .screen .weatherbox:hover svg .sun {
+  fill: transparent;
+  stroke: transparent;
+}
+.phone .hxc .screen .weatherbox:hover svg .cloud {
+  fill: white;
+  transform: translate(15px, -30px);
+}
+.phone .hxc .screen .weatherbox:hover svg .rain {
+  display: block;
+  animation: raining 4s both;
+}
+.phone .hxc .screen .weatherbox:hover svg .thunder {
+  display: block;
+  animation: thunders 2s both;
+  animation-delay: 1s;
+}
+.phone .hxc .screen .weatherbox:hover .rainbow {
+  animation: ShowRainbow 2s both;
+  animation-delay: 1.5s;
+}
+.phone .hxc .screen .weatherbox .infos {
+  height: 80px;
+  color: white;
+}
+.phone .hxc .screen .weatherbox .infos .place {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.phone .hxc .screen .weatherbox .infos .pic {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.phone .hxc .screen .weatherbox .infos .weatherinfo {
+  text-align: right;
+  width: 100px;
+  position: absolute;
+  right: 5%;
+  margin: 10px 0px;
+}
+.phone .hxc .screen .weatherbox .infos .weatherinfo .date {
+  margin: 0;
+}
+.phone .hxc .screen .weatherbox .infos .weatherinfo .temps {
+  display: flex;
+  align-items: center;
+}
+.phone .hxc .screen .weatherbox .infos .weatherinfo .temp {
+  font-size: 20px;
+  margin: 10px 0;
+  margin-right: 5px;
+}
+.phone .hxc .screen .weatherbox .infos .weatherinfo .highlow {
+  font-size: 12px;
+}
+.phone .hxc .screen .page1 {
+  background-image: url("https://attach.mobile01.com/attach/201006/mobile01-4bcd20eb6b3fc628cca843c92ef7ea3a.jpg.webp");
+  background-size: 100% auto;
+  background-size: cover;
+  transition: 0.5s;
+}
+.phone .hxc .screen .page1 .weatherbox2 {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 50%;
+  top: 28%;
+  transform: translateX(-50%);
+  height: 70px;
+  border-radius: 10px;
+  width: 300px;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+  transition: 0.5s;
+}
+.phone .hxc .screen .page1 .weatherbox2 .dayweather {
+  display: inline-block;
+  width: calc(100% / 7 - 5px);
+  text-align: center;
+  margin: 5px;
+}
+.phone .hxc .screen .page1 .weatherbox2 .dayweather svg {
+  width: 30px;
+  height: 30px;
+}
+.phone .hxc .screen .page1 .weatherbox2 .dayweather svg .snow {
+  stroke: white;
+  stroke-width: 5px;
+  animation: snowdrop 2s infinite;
+}
+@keyframes snowdrop {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: scaleX(-1) translateY(0px);
+  }
+  100% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+}
+.phone .hxc .screen .page1 .weatherbox2 .dayweather svg .thin {
+  stroke-width: 3px;
+}
+.phone .hxc .screen .page1 .weatherbox2 .dayweather h3 {
+  margin: 0;
+  color: white;
+}
+.phone .hxc .screen .page1 .weatherbox2 .dayweather .cloud {
+  fill: #ccc;
+  animation: clouddrift 4s infinite;
+}
+@keyframes clouddrift {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.phone .hxc .screen .page1 .weatherbox2 .dayweather .white {
+  fill: white;
+}
+.phone .hxc .screen .page1 .weatherbox2 .dayweather .thunder {
+  display: block;
+  stroke: #FFD633;
+  stroke-width: 10px;
+}
+.phone .hxc .screen .page1 .weatherbox2 .dayweather .rain {
+  display: block;
+  fill: white;
+  stroke: white;
+  animation: raindrop 1s infinite linear;
+}
+@keyframes raindrop {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+}
+.phone .hxc .screen .page1 .weatherbox2 .dayweather .tornado {
+  animation: tornadodrift 4s infinite;
+}
+@keyframes tornadodrift {
+  0% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.phone .hxc .screen .page2 {
+  background-image: url("https://images.unsplash.com/photo-1643637200739-91b446b0e4e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80");
+  background-size: cover;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  text-align: center;
+  transition: 0.5s;
+}
+.phone .hxc .screen .page2 .camera_item {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 5%;
+  bottom: 6%;
+  background-image: url("https://cdn4.iconfinder.com/data/icons/angular-action/30/091-grid_view-block-thumbnail-item-512.png");
+  background-size: cover;
+  background-color: #fff;
+  border: 2px solid black;
+  filter: invert(1);
+  cursor: pointer;
+}
+.phone .hxc .screen .page2 .camera_item:hover {
+  background-color: #999;
+}
+.phone .hxc .screen .page2 .recorder {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 2px solid white;
+  position: absolute;
+  left: 25%;
+  bottom: 6%;
+  cursor: pointer;
+}
+.phone .hxc .screen .page2 .recorder i {
+  font-size: 16px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.phone .hxc .screen .page2 .recorder:hover {
+  background-color: #999;
+}
+.phone .hxc .screen .page2 .camera_btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 2px solid white;
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-40%);
+  cursor: pointer;
+}
+.phone .hxc .screen .page2 .camera_btn i {
+  font-size: 32px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.phone .hxc .screen .page2 .camera_btn:hover {
+  background-color: #999;
+}
+.phone .hxc .screen .page2 .photo {
+  width: 50px;
+  height: 50px;
+  border: 2px solid white;
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  background-color: #999;
+  cursor: pointer;
+}
+.phone .hxc .screen .page2 .photo:hover {
+  border-color: #000;
+}
+.phone .hxc .screen .page2 .hasphoto {
+  background-image: url("https://images.unsplash.com/photo-1643637200739-91b446b0e4e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80");
+  background-size: cover;
+  background-size: 100% 100%;
+}
+.phone .hxc .screen .page3 {
+  background-color: #141414;
+  position: absolute;
+  left: 200%;
+  top: 100%;
+  transition: 0.5s;
+  color: white;
+}
+.phone .hxc .screen .page3 .status {
+  background-color: #0078b6;
+}
+.phone .hxc .screen .page3 .status .phoneicon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+}
+.phone .hxc .screen .page3 .status .signal {
+  top: -2px;
+}
+.phone .hxc .screen .page3 .status h3 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.phone .hxc .screen .page3 .status .battery {
+  margin-right: 10px;
+}
+.phone .hxc .screen .page3 .call_tel_info {
+  width: 100%;
+  height: 60px;
+  top: 20px;
+  background-color: #0086cb;
+}
+.phone .hxc .screen .page3 .call_tel_info .telinfo {
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+.phone .hxc .screen .page3 .call_tel_info .telinfo p {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.phone .hxc .screen .page3 .call_tel_info .telinfo .service_provider {
+  left: 10px;
+}
+.phone .hxc .screen .page3 .call_tel_info .telinfo .tel_status {
+  position: absolute;
+  left: 80%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.phone .hxc .screen .page3 .call_pic {
+  width: 100%;
+  height: 140px;
+  top: 20px;
+  background-color: #4b4b4b;
+}
+.phone .hxc .screen .page3 .call_pic i {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  font-size: 120px;
+  color: #5d5d5d;
+}
+.phone .hxc .screen .page3 .call_info {
+  width: 100%;
+  height: 150px;
+  top: 20px;
+  background-color: #141414;
+}
+.phone .hxc .screen .page3 .call_info .phoneinfo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+.phone .hxc .screen .page3 .call_info .phoneinfo .title {
+  font-size: 32px;
+}
+.phone .hxc .screen .page3 .call_info .phoneinfo .tel {
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+.phone .hxc .screen .page3 .call_button {
+  width: 100%;
+  height: 60px;
+  top: 20px;
+  background-color: #141414;
+}
+.phone .hxc .screen .page3 .call_button .callbtn {
+  width: 48%;
+  font-size: 24px;
+  display: inline-block;
+  text-align: center;
+  color: #333;
+  cursor: pointer;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  position: absolute;
+  left: 50%;
+}
+.phone .hxc .screen .page3 .call_button .callbtn p {
+  margin: 0;
+  font-size: 12px;
+}
+.phone .hxc .screen .page3 .call_button .callbtn:hover {
+  color: white;
+}
+.phone .hxc .screen .page3 .call_button .mute {
+  border-right: 1px solid #333;
+  transform: translateX(-100%);
+}
+.phone .hxc .screen .page3 .call_buttom_btn {
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  bottom: 0px;
+  background-color: #141414;
+  display: flex;
+}
+.phone .hxc .screen .page3 .call_buttom_btn .btn {
+  width: 60px;
+  height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.phone .hxc .screen .page3 .call_buttom_btn .btn1 {
+  border-top: 3px solid #232323;
+  color: #eee;
+  border-right: 1px solid #232323;
+}
+.phone .hxc .screen .page3 .call_buttom_btn .btn1 i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.phone .hxc .screen .page3 .call_buttom_btn .btn1:hover {
+  background-color: #eee;
+  color: black;
+}
+.phone .hxc .screen .page3 .call_buttom_btn .btn2 {
+  width: calc(100% - 120px);
+  color: red;
+  border-top: 3px solid red;
+  margin: 0;
+  padding: 0;
+}
+.phone .hxc .screen .page3 .call_buttom_btn .btn2:hover {
+  background-color: #eee;
+  font-weight: bold;
+}
+.phone .hxc .screen .page3 .call_buttom_btn .btn3 {
+  border-top: 3px solid #232323;
+  border-left: 2px solid #232323;
+  font-size: 20px;
+  color: #eee;
+}
+.phone .hxc .screen .page3 .call_buttom_btn .btn3 i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.phone .hxc .screen .page3 .call_buttom_btn .btn3:hover {
+  background-color: #eee;
+  color: black;
+}
+.phone .hxc .screen .apps {
+  width: 300px;
+  height: 40%;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.phone .hxc .screen .apps .app {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  display: inline-block;
+  margin: 20px 10px;
+  transition: 0.5s;
+  cursor: pointer;
+  text-align: center;
+}
+.phone .hxc .screen .apps .app:hover {
+  transform: translateY(-10px);
+  width: 55px;
+  height: 55px;
+}
+.phone .hxc .screen .apps .app p {
+  border-radius: 50px/100px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -50px;
+}
+.phone .hxc .screen .apps .app1 {
+  background-image: url("https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Actions-help-about-icon.png");
+}
+.phone .hxc .screen .apps .app4 {
+  background-image: url("https://play-lh.googleusercontent.com/E8abWF0D4nt9Il12VRFBqWkqawYF2g7vPmyspPOYqXzh9PH8VWDdT0hIF9viC5le-Lc");
+}
+.phone .hxc .screen .apps .app5 {
+  background-image: url("https://findicons.com/files/icons/2382/htc_sense_ui_2_1_icons/128/htc_sense_text_icon.png");
+}
+.phone .hxc .screen .apps .app6 {
+  background-image: url("https://findicons.com/files/icons/2382/htc_sense_ui_2_1_icons/128/htc_sense_email_icon.png");
+}
+.phone .hxc .screen .apps .app7 {
+  background-image: url("https://findicons.com/files/icons/2382/htc_sense_ui_2_1_icons/128/htc_sense_internet_icon.png");
+}
+.phone .hxc .screen .apps .app8 {
+  background-image: url("https://findicons.com/files/icons/2382/htc_sense_ui_2_1_icons/128/htc_sense_camera_icon.png");
+}
+.phone .hxc .screen .screen_buttom {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+}
+.phone .hxc .screen .screen_buttom:before {
+  content: "";
+  display: block;
+  width: 110%;
+  height: 80px;
+  background-color: #888;
+  position: absolute;
+  left: 50%;
+  bottom: -30%;
+  transform: translateX(-50%);
+  border-radius: 100%;
+}
+.phone .hxc .screen .screen_buttom:after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 3px;
+  border: 1px solid #fff;
+  background-color: #eee;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  top: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.phone .hxc .screen .screen_buttom:after:hover {
+  background-color: #999;
+}
+.phone .hxc .screen .screen_buttom .shape {
+  width: 110%;
+  height: 80px;
+  background-color: transparents;
+  position: absolute;
+  left: 50%;
+  bottom: -40%;
+  transform: translateX(-50%);
+  border-radius: 100%;
+  overflow: hidden;
+}
+.phone .hxc .screen .screen_buttom .shape .buttons {
+  width: 110px;
+  height: 40px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  box-shadow: 0px 0 2px 2px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+.phone .hxc .screen .screen_buttom .shape .buttons:hover {
+  filter: brightness(1.75);
+}
+.phone .hxc .screen .screen_buttom .shape .buttons.at1 {
+  width: 80px;
+  left: 20%;
+  border-radius: 60% 20% 10% 10%;
+}
+.phone .hxc .screen .screen_buttom .shape .buttons.at2 {
+  height: 43px;
+  top: -3px;
+  border-radius: 20% 20% 10% 10%;
+}
+.phone .hxc .screen .screen_buttom .shape .buttons.at3 {
+  width: 80px;
+  left: 80%;
+  border-radius: 20% 60% 10% 10%;
+}
+.phone .hxc .screen .screen_buttom .shape .buttons .button {
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+}
+.phone .hxc .screen .screen_buttom .shape .buttons .button i {
+  display: inline-block;
+}
+.phone .hxc .screen .screen_buttom .shape .buttons .button p {
+  display: inline-block;
+  margin: 0;
+}
+.phone .hxc .screen .screen_buttom .shape .buttons .button .btn1 {
+  width: 20px;
+  height: 20px;
+  background-image: url("https://www.veryicon.com/download/png/miscellaneous/offerino-icons/app-menu?s=256");
+  background-size: cover;
+  background-size: 100% auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  top: 60%;
+  filter: invert(1);
+}
+.phone .hxc .screen .screen_buttom .shape .buttons .button .btn2 {
+  width: auto;
+  left: 70%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  filter: invert(1);
+  font-weight: bold;
+}
+.phone .hxc .screen .screen_buttom .shape .buttons .button .btn3 {
+  width: 20px;
+  height: 20px;
+  background-image: url("https://icon-library.com/images/artist-icon/artist-icon-12.jpg");
+  background-size: cover;
+  background-size: 100% auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  top: 60%;
+  filter: invert(1);
+}
+@keyframes screen_lighten {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(10);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+.phone .hxc .lighten {
+  animation: screen_lighten 0.5s both;
+}
+
+.rainbow {
+  width: 0%;
+  height: 250px;
+  position: absolute;
+  overflow: hidden;
+  transition: 0.5s 2s;
+  z-index: 10;
+}
+.rainbow .circle {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30px;
+  border-radius: 100%;
+  border: 5px solid;
+}
+.rainbow .circle1 {
+  border-color: rgba(255, 0, 0, 0.3);
+  width: 400px;
+  height: 400px;
+}
+.rainbow .circle2 {
+  border-color: rgba(255, 165, 0, 0.3);
+  width: 390px;
+  height: 390px;
+  top: 35px;
+}
+.rainbow .circle3 {
+  border-color: rgba(255, 255, 0, 0.3);
+  width: 380px;
+  height: 380px;
+  top: 40px;
+}
+.rainbow .circle4 {
+  border-color: rgba(0, 128, 0, 0.3);
+  width: 370px;
+  height: 370px;
+  top: 45px;
+}
+.rainbow .circle5 {
+  border-color: rgba(0, 0, 255, 0.3);
+  width: 360px;
+  height: 360px;
+  top: 50px;
+}
+.rainbow .circle6 {
+  border-color: rgba(75, 0, 130, 0.3);
+  width: 350px;
+  height: 350px;
+  top: 55px;
+}
+.rainbow .circle7 {
+  border-color: rgba(128, 0, 255, 0.3);
+  width: 340px;
+  height: 340px;
+  top: 60px;
+}
+@keyframes ShowRainbow {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+svg {
+  width: 100%;
+  max-width: 50px;
+  height: 50px;
+}
+svg .sun {
+  fill: #FFD633;
+  stroke: rgba(255, 214, 51, 0.3);
+  stroke-width: 30px;
+  stroke-dasharray: 3px;
+  transition: 0.5s;
+}
+svg .cloud {
+  overflow: hidden;
+  fill: transparent;
+  transition: 0.5s;
+}
+svg .rain {
+  display: none;
+  stroke: transparent;
+  stroke-width: 3px;
+}
+@keyframes raining {
+  0% {
+    stroke: transparent;
+  }
+  50% {
+    stroke: #eee;
+  }
+  100% {
+    stroke: transparent;
+  }
+}
+svg .thunder {
+  display: none;
+  stroke: transparent;
+  stroke-width: 5px;
+}
+@keyframes thunders {
+  0% {
+    stroke: transparent;
+  }
+  20% {
+    stroke: white;
+  }
+  40% {
+    stroke: #FFD633;
+  }
+  100% {
+    stroke: transparent;
+  }
+}
+
+.bottom {
+  width: 100%;
+  z-index: 10;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 15px;
+  text-align: center;
+}
+.bottom i {
+  margin: 0 30px;
+  color: #898989;
+  font-size: 20px;
+  cursor: pointer;
+}
+.bottom i:hover {
+  color: #fff;
+}
+.bottom .button {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  transition-duration: 0.5px;
+}
+.bottom .button:hover {
+  background-color: #aaa;
+}

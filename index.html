@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Clock</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="phone">
+  <div class="top">
+    <div class="listener"></div>
+    <div class="camera"> </div>
+  </div>
+  <div class="hxc">
+    <h3 class="name">h<span class="t">T</span><span class="c">ㄈ</span></h3>
+    <div class="screen">          
+      <div class="page page1">
+        <div class="status"><i class="fa-solid fa-signal signal"></i><i class="fa-solid fa-battery-full battery"></i>
+          <h3 class="st_time">10:08 AM</h3>
+        </div>
+        <div class="weatherbox"> 
+          <div class="rainbow">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+            <div class="circle circle4"></div>
+            <div class="circle circle5"></div>
+            <div class="circle circle6"></div>
+            <div class="circle circle7"></div>
+          </div>
+          <div class="timer">
+            <div class="hour"> 
+              <h1 class="hr">10</h1>
+            </div>
+            <div class="min">
+              <h1 class="st_min">08</h1>
+            </div>
+          </div>
+          <div class="infos">
+            <div class="place">台北<br>晴時多雲</div>
+            <div class="pic"> 
+              <svg viewbox="-50 -50 100 100">
+                <circle class="sun" cx="0" cy="0" r="30">
+                  <animate attributeName="r" dur="2s" values="30;20;30" repeatCount="indefinite"> </animate>
+                </circle>
+                <circle class="cloud" cx="0" cy="30" r="20"></circle>
+                <circle class="cloud" cx="-15" cy="30" r="20"></circle>
+                <circle class="cloud" cx="-30" cy="30" r="20"></circle>
+                <circle class="cloud" cx="-25" cy="10" r="15"></circle>
+                <circle class="cloud" cx="-7" cy="15" r="15"></circle>
+                <line class="rain" x1="-10" y1="25" x2="-10" y2="35">
+                  <animate attributeName="y1" begin="0s" dur="2s" values="25;35" repeatCount="indefinite"></animate>
+                  <animate attributeName="y2" begin="0s" dur="2s" values="35;45" repeatCount="indefinite"></animate>
+                </line>
+                <line class="rain" x1="0" y1="20" x2="0" y2="30">
+                  <animate attributeName="y1" begin="-0.3s" dur="2s" values="20;30" repeatCount="indefinite"></animate>
+                  <animate attributeName="y2" begin="-0.3s" dur="2s" values="30;40" repeatCount="indefinite"></animate>
+                </line>
+                <line class="rain" x1="10" y1="25" x2="10" y2="35">
+                  <animate attributeName="y1" begin="-0.6s" dur="2s" values="25;35" repeatCount="indefinite"></animate>
+                  <animate attributeName="y2" begin="-0.6s" dur="2s" values="35;45" repeatCount="indefinite"></animate>
+                </line>
+                <line class="thunder" x1="0" y1="20" x2="-10" y2="35">
+                  <animate attributeName="y2" begin="-1.2s" dur="1s" values="20;35"></animate>
+                  <animate attributeName="x2" begin="-1.2s" dur="1s" values="0;-10"></animate>
+                </line>
+                <line class="thunder" x1="-10" y1="35" x2="10" y2="35">
+                  <animate attributeName="x2" begin="-0.6s" dur="1s" values="-10;10"></animate>
+                </line>
+                <line class="thunder" x1="10" y1="35" x2="0" y2="55"> 
+                  <animate attributeName="y2" begin="0s" dur="1s" values="35;55"></animate>
+                  <animate attributeName="x2" begin="0s" dur="1s" values="10;0"></animate>
+                </line>
+              </svg>
+            </div>
+            <div class="weatherinfo">
+              <p class="date">週五3月12日</p>
+              <div class="temps">
+                <p class="temp">25°C</p><span class="highlow">高溫: 28°<br>低溫: 19°</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="weatherbox2">
+          <div class="dayweather">
+            <svg viewbox="-50 -50 100 100">
+              <circle class="sun" cx="0" cy="0" r="22"></circle>
+            </svg>
+            <h3>Mon</h3>
+          </div>
+          <div class="dayweather">
+            <svg viewbox="-50 -50 100 100">
+              <circle class="sun" cx="0" cy="0" r="22"></circle>
+              <circle class="cloud white" cx="0" cy="30" r="20"></circle>
+              <circle class="cloud white" cx="-15" cy="30" r="20"></circle>
+              <circle class="cloud white" cx="-30" cy="30" r="20"></circle>
+              <circle class="cloud white" cx="-25" cy="10" r="15"></circle>
+              <circle class="cloud white" cx="-7" cy="15" r="15"></circle>
+            </svg>
+            <h3>Tue</h3>
+          </div>
+          <div class="dayweather">
+            <svg viewbox="-63 -40 100 100">
+              <circle class="cloud white" cx="0" cy="30" r="20"></circle>
+              <circle class="cloud white" cx="-15" cy="30" r="20"></circle>
+              <circle class="cloud white" cx="-30" cy="30" r="20"></circle>
+              <circle class="cloud white" cx="-25" cy="10" r="15"></circle>
+              <circle class="cloud white" cx="-7" cy="15" r="15"></circle>
+            </svg>
+            <h3>Wed</h3>
+          </div>
+          <div class="dayweather">
+            <svg viewbox="-63 -40 100 100">
+              <line class="rain" x1="-25" y1="15" x2="-25" y2="35"></line>
+              <line class="rain" x1="-14" y1="5" x2="-14" y2="25"></line>
+              <line class="rain" x1="-5" y1="20" x2="-5" y2="45"></line>
+              <circle class="cloud" cx="0" cy="30" r="20"></circle>
+              <circle class="cloud" cx="-15" cy="30" r="20"></circle>
+              <circle class="cloud" cx="-30" cy="30" r="20"></circle>
+              <circle class="cloud" cx="-25" cy="10" r="15"></circle>
+              <circle class="cloud" cx="-7" cy="15" r="15"></circle>
+            </svg>
+            <h3>Thu</h3>
+          </div>
+          <div class="dayweather">
+            <svg viewbox="-50 -60 100 100">
+              <line class="snow" x1="-30" y1="0" x2="30" y2="0"></line>
+              <line class="snow thin" x1="-30" y1="10" x2="-15" y2="15"></line>
+              <line class="snow thin" x1="-10" y1="30" x2="-15" y2="15"></line>
+              <line class="snow" x1="0" y1="-30" x2="0" y2="30"></line>
+              <line class="snow thin" x1="30" y1="10" x2="15" y2="15"></line>
+              <line class="snow thin" x1="10" y1="30" x2="15" y2="15"></line>
+              <line class="snow" x1="-25" y1="-25" x2="25" y2="25"></line>
+              <line class="snow thin" x1="-10" y1="-30" x2="-15" y2="-15"></line>
+              <line class="snow thin" x1="-30" y1="-10" x2="-15" y2="-15"></line>
+              <line class="snow" x1="-25" y1="25" x2="25" y2="-25"></line>
+              <line class="snow thin" x1="10" y1="-30" x2="15" y2="-15"></line>
+              <line class="snow thin" x1="30" y1="-10" x2="15" y2="-15">    </line>
+            </svg>
+            <h3>Fri</h3>
+          </div>
+          <div class="dayweather">
+            <svg viewbox="-50 -60 100 100">
+              <line class="thunder" x1="0" y1="-30" x2="-30" y2="0"></line>
+              <line class="thunder" x1="-30" y1="0" x2="30" y2="0"></line>
+              <line class="thunder" x1="30" y1="0" x2="0" y2="30"> </line>
+            </svg>
+            <h3>Sat</h3>
+          </div>
+          <div class="dayweather">
+            <svg viewbox="0 0 500 150">
+              <ellipse class="tornado" cx="250" cy="40" rx="130" ry="50" style="fill:#E0FFFF"></ellipse>
+              <ellipse class="tornado" cx="250" cy="80" rx="200" ry="30" style="fill:#E5FFFF"></ellipse>
+              <ellipse class="tornado" cx="250" cy="120" rx="240" ry="30" style="fill:#E0FFFF"></ellipse>
+              <ellipse class="tornado" cx="250" cy="160" rx="200" ry="30" style="fill:#E8FFFF"></ellipse>
+              <ellipse class="tornado" cx="250" cy="200" rx="230" ry="30" style="fill:#E0FFFF"></ellipse>
+              <ellipse class="tornado" cx="250" cy="240" rx="80" ry="30" style="fill:#E6FFFF"></ellipse>
+              <ellipse class="tornado" cx="250" cy="280" rx="50" ry="30" style="fill:#E9FFFF"></ellipse>
+              <ellipse class="tornado" cx="250" cy="320" rx="10" ry="30" style="fill:#E0FFFF">             </ellipse>
+            </svg>
+            <h3>Sun</h3>
+          </div>
+        </div>
+        <div class="apps">
+          <div class="app app1">
+            <p>&nbsp;Tips&nbsp;</p>
+          </div>
+          <div class="app app2"> </div>
+          <div class="app app3"> </div>
+          <div class="app app4">
+            <p>&nbsp;Market&nbsp;</p>
+          </div>
+          <div class="app app5">
+            <p>&nbsp;Messages&nbsp;</p>
+          </div>
+          <div class="app app6">
+            <p>&nbsp;Mail&nbsp;</p>
+          </div>
+          <div class="app app7">
+            <p>&nbsp;Internet&nbsp;</p>
+          </div>
+          <div class="app app8">
+            <p>&nbsp;Camera&nbsp;</p>
+          </div>
+        </div>
+        <div class="screen_buttom">
+          <div class="shape">
+            <div class="buttons at1">
+              <div class="button">
+                <div class="btn1"></div>
+              </div>
+            </div>
+            <div class="buttons at2">
+              <div class="button">
+                <div class="btn2 phonebtn"><i class="fa-solid fa-phone"></i>
+                  <p>Phone</p>
+                </div>
+              </div>
+            </div>
+            <div class="buttons at3">
+              <div class="button">
+                <div class="btn3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page page2">
+        <div class="camera_btn"><i class="fa-solid fa-camera"></i></div>
+        <div class="recorder"><i class="fa-solid fa-video"></i></div>
+        <div class="camera_item"></div>
+        <div class="photo"></div>
+      </div>
+      <div class="page page3">
+        <div class="status"><i class="fa-solid fa-phone phoneicon"></i><i class="fa-solid fa-signal signal"></i><i class="fa-solid fa-battery-full battery"></i>
+          <h3 class="st_time">10:08 AM</h3>
+        </div>
+        <div class="call_tel_info">
+          <div class="telinfo">
+            <p class="service_provider">台灣大哥大</p>
+            <p class="tel_status">撥號中...</p>
+          </div>
+        </div>
+        <div class="call_pic"><i class="fa-solid fa-user-secret"></i></div>
+        <div class="call_info">
+          <div class="phoneinfo">
+            <p class="title">Spy Family</p>
+            <p class="tel">行 : 0987 654 321</p>
+          </div>
+        </div>
+        <div class="call_button">
+          <div class="callbtn mute"><i class="fa-solid fa-microphone-slash"></i>
+            <p>靜音</p>
+          </div>
+          <div class="callbtn speakerphone"><i class="fa-solid fa-volume-high"></i>
+            <p>擴音功能</p>
+          </div>
+        </div>
+        <div class="call_buttom_btn">
+          <div class="btn btn1"><i class="fa-solid fa-keyboard"></i></div>
+          <div class="btn btn2 endcall">
+            <p>結束通話</p>
+          </div>
+          <div class="btn btn3"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom"><i class="fa-solid fa-house house"></i><i class="fa-solid fa-align-justify shake"></i><i class="fa-solid fa-share return"></i><i class="fa-solid fa-magnifying-glass"></i></div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
