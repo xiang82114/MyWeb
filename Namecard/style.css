@@ -1,0 +1,277 @@
+*{
+/*   border:solid 1px; */
+  font-family:微軟正黑體;
+  position:relative;
+}
+html,body{
+  width:100%;
+  height:100%;
+  padding:0px;
+  margin:0px;
+}
+body{
+  background-color:#d1d1d1;
+  border-top:solid 20px #76d7f2;
+  border-bottom:solid 20px #76d7f2;
+  box-sizing:border-box;
+  overflow:hidden;
+}
+
+.namecard{
+  width:350px;height:280px;
+  padding:20px;
+  margin: auto;
+  margin-top:150px;
+  background-color:#f2dd9c;
+  letter-spacing:1px;
+  font-weight:100;
+  color:#666;
+  overflow:hidden;
+  border-radius:6px;
+  border: solid 1px rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 15px
+    rgba(0,0,0,0.2);  
+}
+.namecard h2{
+  font-size:25px;  
+  font-weight:700;
+}
+.namecard h2 span{
+  font-size:12px;  
+}
+.namecard h5{
+  color:#76d7f2;
+  font-weight:650;
+}
+.namecard p{
+  font-size:12px;
+  line-height:22px;
+}
+.circle{
+  width:100px;
+  height:100px;
+  border-radius:100%;
+  position:absolute;  
+  
+}
+.circle1{
+  right:100px;
+  bottom:-90px;
+  background-color:#76d7f2;
+  border: 3px solid #585658;
+  transition: 0.5s; 
+}
+.ear{
+  border: 3px solid #585658;
+  width:40px;
+  height:40px;
+  border-radius:10px;
+}
+.ear1{
+  right:110px;
+  bottom:-20px;
+  background-color:#76d7f2;
+  transform: rotate(-10deg);
+/*   transition: 1s;  */
+  transition-delay: 0.5s;
+}
+.ear2{
+  right:150px;
+  bottom:-20px;
+  background-color:#76d7f2;
+  transform: rotate(10deg);
+/*   transition: 1s;  */
+  transition-delay: 0.5s; 
+}
+.eyes{
+  border: 3px solid #585658;
+  width:10px;
+  height:20px;
+  background-color:#585658;
+}
+.eyes1{
+  right:120px;
+  bottom:-20px;
+  transform: rotate(-20deg);
+  transition: 0.5s;    
+}
+.eyes2{
+  right:170px;
+  bottom:-20px;
+  transform: rotate(20deg);
+  transition: 0.5s;  
+}
+.mouse{
+  border-bottom: 5px solid #585658;
+  border-left: 5px solid #585658;
+  border-radius:8px;
+  width:10px;
+  height:10px;
+  transform: rotate(-45deg);
+}
+.mouse1{
+  right:151px;
+  top:10px;
+  transition: 0.5s;  
+}
+.mouse2{
+  right:140px;
+  top:10px;
+  transition: 0.5s;  
+}
+.mouse3{
+  width:10px;
+  height:15px;
+  border-right: 5px solid #585658;
+  transform: rotate(0deg);
+  border-radius:20px;
+  right:142px;
+  top:20px;
+  background-color: #e5907c;
+  transition: 0.5s;  
+}
+.capoo_visable{
+  opacity: 0;
+}
+/* .mouse{
+  border: 3px solid #585658;
+  right:60px;
+  bottom:-110px;
+  font-weight: 900;
+  letter-spacing: -5px;
+} */
+.circle2{
+  width:60px;
+  height:60px;
+  right:-30px;
+  top:-30px;
+  border:solid 3px #76d7f2;
+}
+.square{
+  width:100px;
+  height:100px;
+  border-radius:5%;
+  position:absolute;  
+}
+.square1{
+  width:120px;
+  height:80px;
+  right:20px;
+  bottom:30px; 
+  border:solid 5px #003366;
+  border-top:solid 20px #003366;
+}
+.square2{
+  width:80px;
+  height:10px;
+  right:25px;
+  bottom:120px; 
+  border-radius:3%;
+  background-color:white;
+
+}
+.circle3{
+  width:8px;
+  height:8px;
+  right:135px;
+  bottom:120px;
+  background-color: #f24;  
+}
+.circle4{
+  width:8px;
+  height:8px;
+  right:123px;
+  bottom:120px;
+  background-color:yellow;
+}
+.circle5{
+  width:8px;
+  height:8px;
+  right:110px;
+  bottom:120px;
+  background-color:blue;
+}
+.square3{
+  width:100px;
+  height:25px;
+  right:10px;
+  bottom:45px; 
+  border-radius:3%;
+  background-color:#fff586;  
+}
+.square4{
+  width:25px;
+  height:25px;
+  right:10px;
+  bottom:10px; 
+  border-radius:3%;
+  background-color:orange;
+}
+.square5{
+  width:25px;
+  height:25px;
+  right:48px;
+  bottom:10px; 
+  border-radius:3%;
+  background-color:#fec6d2;
+}
+.square6{
+  width:25px;
+  height:25px;
+  left:10px;
+  bottom:10px; 
+  border-radius:3%;
+  background-color:#76d7f2;
+}
+.computer{
+  font-weight: 900;
+  color: #000;
+  left:20px;
+  cursor:pointer;
+/*   transition: 0.5s;   */
+  transition-delay: 0.5s;
+  opacity: 0;
+}
+
+.computer .square1{
+  background-color: #eee;
+}
+/* .computer:hover{  
+    transform:rotate(-45deg);
+    background-color: yellow;
+} */
+.page_title{
+/*   border:solid 1px black; */
+  text-align:center;
+  font-weight:500px;
+  color:#555;
+}
+.mark{
+  width:100%;
+  text-align:center;
+  font-size:350px;
+  position:absolute;
+  bottom:100px;
+  font-weight:100;
+  color:rgba(0,0,0,0.06);
+}
+.pic{
+  position:absolute;  
+  right:30px;
+  top: -10px;
+}
+.namecard:hover .circle1{
+  bottom:-80px;  
+}
+.namecard:hover .capoo_visable{
+  opacity: 1
+}
+.namecard:hover .computer{
+  opacity: 1
+}
+/* .namecard:hover .ear1{
+  bottom:-20px;
+}
+.namecard:hover .ear2{
+  bottom:-20px;
+} */

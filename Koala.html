@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - &lt;Project 5&gt; 實際應用範例 bootstrap - 結合skrollr製作捲動式網頁 123</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid"> <a class="navbar-brand d-flex align-items-center" href="#header_index"> <img
+          class="rounded-pill" id="logo" src="https://www.emojiall.com/en/header-svg/%F0%9F%90%A8.svg" alt="Avatar Logo"
+          style="width:30px;" /> Koala </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+        aria-controls="#navbar"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item px-3"><a class="nav-link" href="#section_ask">引言 Intro</a></li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">簡介 About</a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#section_about">名子</a></li>
+              <li><a class="dropdown-item" href="#section_active">習性</a></li>
+              <li><a class="dropdown-item" href="#section_born">出生</a></li>
+            </ul>
+          </li>
+          <li class="nav-item px-3"><a class="nav-link" href="#section_subsistence_crisis">生存危機 Life</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header class="jumbotron" id="header_index">
+    <div class="container">
+      <h1 data-0="transform: translateY(-50px)" data-500="transform: translateY(100px)">有名無實的無尾熊</h1>
+      <hr />
+      <h4>澳大利亞的可愛動物，其慵懶人生的背後</h4>
+    </div>
+  </header>
+  <section id="section_ask">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 img" data-0="transform: scale(0.01, 0.01)" data-500="transform: scale(1, 1)"></div>
+        <div class="col-sm-6">
+          <h2 data-300="opacity: 0" data-500="opacity: 1">關於可愛的無尾熊，你知道多少?</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="section_about">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12" data-bottom-top="transform: translateY(-50px);opacity:0"
+          data-center="transform: translateY(0px);opacity:1">
+          <h1> 無尾熊的名字的由來</h1><br />
+        </div>
+        <div class="col-lg-4 col-md-6 m-lg-0 m-md-0 m-sm-0 m-0" data-bottom-top="transform: translateY(-50px);opacity:0"
+          data-center="transform: translateY(0px);opacity:1">
+          <div class="img_warp"><img
+              src="http://image.knowing.asia/330a95b0-4e98-40de-9941-0030d1439338/6319aad7e455770736939607bffe8483.gif"
+              alt="" /></div><br /><br />
+          <h3>無尾熊不是熊</h3>
+          <p>雖然牠們名字上有個「熊」字，但它不是熊科動物，而是屬於有袋目、樹袋熊科動物。熊科動物是食肉的，無尾熊卻是吃植物的。<br></p>
+        </div>
+        <div class="col-lg-4 col-md-6" data-bottom-top="transform: translateY(-50px);opacity:0"
+          data-center="transform: translateY(0px);opacity:1">
+          <div class="img_warp"><img src="https://img.ltn.com.tw/Upload/news/600/2016/07/20/1768683_1.jpg" alt="" />
+          </div><br />
+          <h3>無尾熊有尾巴</h3>
+          <p>
+            無尾熊有尾巴，而且其為有袋動物而不是熊，像是剛離開育兒袋的小無尾熊寶寶「Grace」，尾巴就非常明顯，至於成年的無尾熊，有大概3公分長的尾巴，作​​用是幫助無尾熊在樹上坐得更舒服，相當於「座墊」，多半是被長長的毛蓋住而不明顯。
+          </p>
+        </div>
+        <div class="col-lg-4" data-bottom-top="transform: translateY(-50px);opacity:0"
+          data-center="transform: translateY(0px);opacity:1">
+          <div class="img_warp"><img
+              src="https://image.cache.storm.mg/styles/smg-800x533-fp/s3/media/image/2015/12/23/20151223-013101_U1085_M113408_b588.jpg?itok=PjvEO5jN"
+              alt="" /></div><br />
+          <h3>無尾熊也喝水</h3>
+          <p>牠們的英文名「koala」來自於澳洲原始住民的歐拉族的達拉格語「gula」，意思是「不喝水」，因為它們可以從尤加利葉中補充大部分90%的水分。但是在乾旱的時候，無尾熊也會因為太渴而大口暢飲。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="section_active">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12" data-bottom-top="transform: translateX(-50px);opacity:0"
+          data-center="transform: translateX(0px);opacity:1">
+          <h1> 無尾熊的習性</h1><br />
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="img_warp" data-bottom-top="transform:translateX(-100%)  rotate(0deg);opacity:0"
+            data-center="transform:translateX(-50%) rotate(360deg);opacity:1"> <img
+              src="http://image.knowing.asia/330a95b0-4e98-40de-9941-0030d1439338/2e5d59255fa71ae4c11293b5c035641c.gif"
+              alt="" /></div><br />
+          <h3 data-bottom-top="transform:translateY(-100px)  ;opacity:0"
+            data-center="transform:translateY(0px) ;opacity:1"> 無尾熊愛睡覺</h3>
+          <p data-bottom-top="transform:translateY(-100px)  ;opacity:0"
+            data-center="transform:translateY(0px) ;opacity:1">
+            尤加利樹葉纖維粗糙非常難嚼，營養成份低，而且還有毒。無尾熊一天睡18~22個小時，一部分是因為要降解尤加利樹葉裡的毒素，一部分也是因為食物裡的熱量不足以支撐它一天下來都活蹦亂跳的。</p>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="img_warp" data-bottom-top="transform:translateX(-100%)  rotate(0deg);opacity:0"
+            data-center="transform:translateX(-50%) rotate(360deg);opacity:1"> <img
+              src="https://cdn2.ettoday.net/images/4383/d4383653.jpg" alt="" /></div><br />
+          <h3 data-bottom-top="transform:translateY(-100px)  ;opacity:0"
+            data-center="transform:translateY(0px) ;opacity:1">無尾熊的大冰棒</h3>
+          <p data-bottom-top="transform:translateY(-100px)  ;opacity:0"
+            data-center="transform:translateY(0px) ;opacity:1">
+            可愛的無尾熊睡覺的時候總是抱著尤加利樹，常常讓人誤以為是樹葉有什麼催眠成分吸引牠們。其實無尾熊身體汗腺構造跟狗狗一樣，只有舌頭能散熱，而澳洲的氣候甚至能高達攝氏46度，水資源在此又相當匱乏，所以牠們抱著尤加利樹這可愛行徑，其實最主要是為了散熱，樹木當中的水蒸氣蒸發相較於空氣中慢，樹根又能更深地吸收冰涼的地下水，對無尾熊而言，尤加利樹就是一個天然「大冰棒」，為消暑的最佳首選。
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <div class="img_warp" data-bottom-top="transform:translateX(-100%)  rotate(0deg);opacity:0"
+            data-center="transform:translateX(-50%) rotate(360deg);opacity:1"> <img
+              src="https://images.pexels.com/photos/162339/koala-cute-tree-zoo-162339.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2"
+              alt="" /></div><br />
+          <h3 data-bottom-top="transform:translateY(-100px)  ;opacity:0"
+            data-center="transform:translateY(0px) ;opacity:1">全世界還有多少無尾熊？</h3>
+          <p data-bottom-top="transform:translateY(-100px)  ;opacity:0"
+            data-center="transform:translateY(0px) ;opacity:1">
+            無尾熊只有澳洲才有，而澳洲現有的無尾熊數量，根據估計，大約在四萬隻到八萬隻之間，已經非常稀少了，是世界性的保護類動物。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="section_born">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12" data-bottom-top="transform: translateY(-150px);opacity:0"
+          data-center="transform: translateY(0px);opacity:1">
+          <h1> 無尾熊的出生</h1><br />
+        </div>
+        <div class="col-lg-4 col-md-6" data-bottom-top="transform: translateY(-150px);opacity:0"
+          data-center="transform: translateY(0px);opacity:1">
+          <div class="img_warp"><img
+              src="http://image.knowing.asia/330a95b0-4e98-40de-9941-0030d1439338/68d8397a533adfb04ced3caea7c8a2f1.gif"
+              alt="" /></div><br />
+          <h3>母無尾熊育兒袋</h3>
+          <p>
+            母無尾熊的育兒袋和袋鼠一樣，都在腹部，但是袋鼠的袋子開口朝上，而無尾熊的袋子開口朝下。為什麼呢？因為無尾熊成天在樹幹上爬來爬去，開口向下，比較不會傷到袋內的小無尾熊呀！不過大家不用擔心小無尾熊會掉出來，因為育兒袋有類似拉繩的肌肉，可以封緊袋子！
+          </p>
+        </div>
+        <div class="col-lg-4 col-md-6" data-bottom-top="transform: translateY(-150px);opacity:0"
+          data-center="transform: translateY(0px);opacity:1">
+          <div class="img_warp"><img src="https://news-data.pts.org.tw/media/47906/conversions/cover-thumb.jpg"
+              alt="" /></div><br />
+          <h3>無尾熊寶寶</h3>
+          <p>剛出生的無尾熊小到你無法想像。無尾熊媽媽每年生育一次，孕期有一個多月，一般一胎只生下一個。無尾熊剛出生的時候很小，只有5克左右，身上沒有毛，眼睛不會睜開，就像一塊紅軟糖。</p>
+        </div>
+        <div class="col-lg-4" data-bottom-top="transform: translateY(-150px);opacity:0"
+          data-center="transform: translateY(0px);opacity:1">
+          <div class="img_warp"><img id="food"
+              src="https://www-ws.gov.taipei/001/Upload/297/relpic/10162/4061102/c7f9b663-5550-45c8-b8ee-ea6e96e54362.jpg"
+              alt="" /></div><br />
+          <h3>無尾熊寶寶食物</h3>
+          <p>無尾熊會把媽媽的糞便當美食。當無尾熊吃媽媽的乳汁長到一定程度後，就會開始吃媽媽的糞便。它會在育兒袋裏把嘴貼到媽媽的臀部，大口大口地吃媽媽的排泄物。對牠們而言，那可是極好的營養品—這也是無尾熊育兒袋朝下的原因。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="section_subsistence_crisis">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12" data-bottom-top="transform: scale(0);opacity:0"
+          data-center="transform: scale(1);opacity:1">
+          <h1> 生存危機 (subsistence_crisis)</h1><br />
+        </div>
+        <div class="col-md-6" data-bottom-top="transform: scale(0);opacity:0"
+          data-center="transform: scale(1);opacity:1">
+          <div class="img_warp"><img
+              src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2022/06/08/0/17308003.jpg&amp;x=0&amp;y=0&amp;sw=0&amp;sh=0&amp;sl=W&amp;fw=800&amp;exp=3600&amp;w=930"
+              alt="" /></div><br />
+          <h3>老化</h3>
+          <p>每天無尾熊都要嚼上萬次才能吃飽，所以到了老年，它們會因為牙齒被磨損得再也無法進食而餓死。</p>
+        </div>
+        <div class="col-md-6" data-bottom-top="transform: scale(0);opacity:0"
+          data-center="transform: scale(1);opacity:1">
+          <div class="img_warp"><img src="https://i.imgur.com/fGfnpw6.jpg" alt="" /></div><br />
+          <h3>疾病</h3>
+          <p>
+            無尾熊容易感染到數種不同的疾病，常見的兩種像是結膜炎、濕屁股，是種腎臟和泌尿系統的疾病，其他還有呼吸系統的感染、一種頭骨的疾病以及寄生蟲等等。而衣原體細菌常被認為是導致無尾熊生病的主要原因，這種病通過啪啪啪傳播，被感染後會導致不孕、失明甚至死亡。，專家們正持續地在研究它和無尾熊族群們的關係。而可以發現的是無尾熊在人群擁擠或是食物供給量不足的地方生活時，會比較容易感染疾病。
+          </p>
+        </div>
+        <div class="col-md-6" data-bottom-top="transform: scale(0);opacity:0"
+          data-center="transform: scale(1);opacity:1">
+          <div class="img_warp"><img src="https://i.imgur.com/YfSqKYY.jpg" alt="" /></div><br />
+          <h3>天敵</h3>
+          <p>無尾熊在生活中有幾個天敵，其中之一是澳洲犬(dingoes)，當無尾熊為了要從一棵樹到另一棵而在地上行走時，不論是成年還是小無尾熊，都有可能受到澳洲犬的傷害；而小無尾熊有時則會受到楔尾鵰（wedge-tailed
+            eagles）及貓頭鷹的攻擊；其他像是野生的貓、狗以及狐狸，也都是無尾熊的天敵之一。但現在無尾熊受到人類道路、交通的影響，使得棲息地的減少，這也可以說是另一種形式的敵人。</p>
+        </div>
+        <div class="col-md-6" data-bottom-top="transform: scale(0);opacity:0"
+          data-center="transform: scale(1);opacity:1">
+          <div class="img_warp"><img src="https://assets.juksy.com/files/articles/97521/800x_100_w-61b838a6cf4ea.jpg"
+              alt="" /></div><br />
+          <h3>人類開墾、氣候變遷</h3>
+          <p>
+            澳洲無尾熊基金會日期提出該國內無尾熊已達「功能性滅絕⚠」的警告。曾經百萬隻的數量已銳減至8萬隻左右，其原因是來自人為的開墾棲息地，以及氣候變遷導致的熱浪死亡。而2019年9月澳洲的森林大火已摧毀超過350萬公頃的林地。作為無尾熊主要棲地的新南威爾斯州當前大火失控的重災區，目前在地的無尾熊族群至少有30%慘遭大火燒死。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="jumbotron">
+    <div class="container">
+      <h2>想了解更多無尾熊的故事嗎？</h2>
+      <input class="form-control" placeholder="E-mail" />
+      <hr />
+      <button class="btn btn-secondary">訂閱故事</button>
+    </div>
+  </footer>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+  <script src="./js/script.js"></script>
+
+</body>
+
+</html>
