@@ -1,56 +1,87 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>CodePen - 我的名片</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
   <link rel="stylesheet" href="./style.css">
 
 </head>
+
 <body>
-<!-- partial:index.partial.html -->
-<div class="mark">
-  Xavier
-</div>
-<div class="namecard">
-  <h2>蔡皓翔
-  <span>(Hao-Siang Tsai)</span>
-  <img class="pic" src="https://i.imgur.com/OuRXSzd.png" alt="" width="80px">
-  </h2>                                   
-  <h5>網頁程式設計師</h5>
-  <hr>
-  <p>國立宜蘭大學-資訊工程所 碩士畢業<br>
-    曾擔任新誼整合科技-專案工程師<br>
-    專長為軟體開發維護，<br>
-    未來希望成為一名出色的網頁設計師，<br>
-    現已朝前端工程師邁進，<br>
-    期待能創造出許多互動性新型網頁。
-  </p>
-  <div class="capoo">    
-    <div class="circle capoo_visable ear ear1"></div>
-    <div class="circle capoo_visable ear ear2"></div>
-    <div class="circle circle1"></div>
-    <div class="circle capoo_visable eyes eyes1"></div>
-    <div class="circle capoo_visable eyes eyes2"></div>    
-    <div class="circle capoo_visable mouse mouse3"></div>
-    <div class="circle capoo_visable mouse mouse1"></div>
-    <div class="circle capoo_visable mouse mouse2"></div>
-  </div>
-  <div class="circle circle2"></div>
-  <div class="computer">
-    <div class="square square1">
-      <div class="square square3"></div>
-      <div class="square square4"></div>
-      <div class="square square5"></div>
-      <div class="square square6"></div>
+  <!-- partial:index.partial.html -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container"><a class="navbar-brand d-flex align-items-center" href="#header_index"> <img
+          class="rounded-pill" id="logo" src="https://www.emojiall.com/en/header-svg/%F0%9F%90%A8.svg" alt="Avatar Logo"
+          style="width:30px;" /> Xavier's home </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+        aria-controls="#navbar"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item px-3"><a class="nav-link" href="./index.html">HOME</a></li>
+          <li class="nav-item px-3"><a class="nav-link" href="#section_ask">ABOUT</a></li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">WORKS</a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="./Koala.html">KOALA</a></li>
+              <li><a class="dropdown-item" href="./Phone.html">My Phone</a></li>
+              <li><a class="dropdown-item" href="./Piano.html">Piano</a></li>
+              <li><a class="dropdown-item" href="./Eleven/Eleven.html">Eleven</a></li>
+              <li><a class="dropdown-item" href="./MyBuylist/MyBuylist.html">MyBuylist</a></li>
+              <li><a class="dropdown-item" href="./Namecard/Namecard.html">MyBuylist</a></li>
+            </ul>
+          </li>
+          <li class="nav-item px-3"><a class="nav-link" href="#section_subsistence_crisis">NAME CARD</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="square square2"></div>
-    <div class="circle circle3"></div>
-    <div class="circle circle4"></div>
-    <div class="circle circle5"></div>
+  </nav>
+
+  <div class="mark">
+    Xavier
   </div>
-</div>
-<h3 class="page_title">簡易自我介紹</h3>
-<!-- partial -->
-  
+  <div class="namecard">
+    <h2>蔡皓翔
+      <span>(Hao-Siang Tsai)</span>
+      <img class="pic" src="https://i.imgur.com/OuRXSzd.png" alt="" width="80px">
+    </h2>
+    <h5>網頁程式設計師</h5>
+    <hr>
+    <p>國立宜蘭大學-資訊工程所 碩士畢業<br>
+      曾擔任新誼整合科技-專案工程師<br>
+      專長為軟體開發維護，<br>
+      未來希望成為一名出色的網頁設計師，<br>
+      現已朝前端工程師邁進，<br>
+      期待能創造出許多互動性新型網頁。
+    </p>
+    <div class="capoo">
+      <div class="circle capoo_visable ear ear1"></div>
+      <div class="circle capoo_visable ear ear2"></div>
+      <div class="circle circle1"></div>
+      <div class="circle capoo_visable eyes eyes1"></div>
+      <div class="circle capoo_visable eyes eyes2"></div>
+      <div class="circle capoo_visable mouse mouse3"></div>
+      <div class="circle capoo_visable mouse mouse1"></div>
+      <div class="circle capoo_visable mouse mouse2"></div>
+    </div>
+    <div class="circle circle2"></div>
+    <div class="computer">
+      <div class="square square1">
+        <div class="square square3"></div>
+        <div class="square square4"></div>
+        <div class="square square5"></div>
+        <div class="square square6"></div>
+      </div>
+      <div class="square square2"></div>
+      <div class="circle circle3"></div>
+      <div class="circle circle4"></div>
+      <div class="circle circle5"></div>
+    </div>
+  </div>
+  <h3 class="page_title">簡易自我介紹</h3>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js'></script>
 </body>
+
 </html>

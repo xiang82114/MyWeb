@@ -1,52 +1,88 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>CodePen - 第 11 章，作業 1 - &lt;Project 7&gt; 互動錄音播放鋼琴</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'><link rel="stylesheet" href="./style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="./style.css">
 
 </head>
+
 <body>
-<!-- partial:index.partial.html -->
-<z id="app">
-  <div class="audioplayer" v-for="s in sounddata">
-    <audio v-bind:data-num="s.number">
-      <source v-bind:src="s.url" type="audio/ogg"/>
-    </audio>
-  </div>
-  <div class="center_box">
-    <h2>Vue.js Piano Project 7</h2>
-    <div class="keyboard">
-      <div class="pianokey" v-for="s in display_keys">
-        <div class="white" v-if="s.type==&quot;white&quot;" v-on:click="addnote(s.num)" v-bind:class="get_current_highlight(s.num,s.key)?&quot;playing&quot;:&quot;&quot;">
-          <div class="label">{{String.fromCharCode(s.key)}}</div>
-        </div>
-        <div class="black" v-if="s.type==&quot;black&quot;" v-on:click="addnote(s.num)" v-bind:class="get_current_highlight(s.num,s.key)?&quot;playing&quot;:&quot;&quot;">
-          <div class="label">{{String.fromCharCode(s.key)}}</div>
-        </div>
+  <!-- partial:index.partial.html -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container"><a class="navbar-brand d-flex align-items-center" href="#header_index"> <img
+          class="rounded-pill" id="logo" src="https://www.emojiall.com/en/header-svg/%F0%9F%90%A8.svg" alt="Avatar Logo"
+          style="width:30px;" /> Xavier's home </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+        aria-controls="#navbar"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item px-3"><a class="nav-link" href="./index.html">HOME</a></li>
+          <li class="nav-item px-3"><a class="nav-link" href="#section_ask">ABOUT</a></li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">WORKS</a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="../Koala.html">KOALA</a></li>
+              <li><a class="dropdown-item" href="../Phone.html">My Phone</a></li>
+              <li><a class="dropdown-item" href="../Piano.html">Piano</a></li>
+              <li><a class="dropdown-item" href="../Eleven/Eleven.html">Eleven</a></li>
+              <li><a class="dropdown-item" href="../MyBuylist/MyBuylist.html">MyBuylist</a></li>
+              <li><a class="dropdown-item" href="../Namecard/Namecard.html">Namecard</a></li>
+            </ul>
+          </li>
+          <li class="nav-item px-3"><a class="nav-link" href="#section_subsistence_crisis">NAME CARD</a></li>
+        </ul>
       </div>
-    </div><br/>
-    <div class="controls">
-      <ul class="notes_list" v-if="notes.length&gt;0">
-        <li v-for="(note,id) in notes" v-bind:class="now_note_id-1==id?&quot;playing&quot;:&quot;&quot;">
-          <div class="num"> {{note.num}}</div>
-          <div class="time">{{note.time}}</div>
-        </li>
-      </ul>
-      <button v-on:click="load_sample">Sample</button>
-      <button v-on:click="playnext(1)">Playnext<i class="fa-solid fa-forward-step"></i></button>
-      <button v-if="playing_time&lt;=0" v-on:click="startplay">Startplay<i class="fa-solid fa-play"></i></button>
-      <button v-if="playing_time&gt;1" v-on:click="stopplay">Stopplay<i class="fa-solid fa-pause"></i></button>
-      <button v-if="record_time&lt;=0" v-on:click="start_record">Record<i class="fa-solid fa-circle"></i></button>
-      <button v-if="record_time&gt;1" v-on:click="stop_record">StopRecord<i class="fa-solid fa-stop"></i></button>
-      <button v-on:click="notes=[]">Clear      </button>
-      <h4> {{playing_time+record_time}}</h4>
+    </div>
+  </nav>
+  <div id="app">
+    <div class="audioplayer" v-for="s in sounddata">
+      <audio v-bind:data-num="s.number">
+        <source v-bind:src="s.url" type="audio/ogg" />
+      </audio>
+    </div>
+    <div class="center_box">
+      <h2>Vue.js Piano Project 7</h2>
+      <div class="keyboard">
+        <div class="pianokey" v-for="s in display_keys">
+          <div class="white" v-if="s.type==&quot;white&quot;" v-on:click="addnote(s.num)"
+            v-bind:class="get_current_highlight(s.num,s.key)?&quot;playing&quot;:&quot;&quot;">
+            <div class="label">{{String.fromCharCode(s.key)}}</div>
+          </div>
+          <div class="black" v-if="s.type==&quot;black&quot;" v-on:click="addnote(s.num)"
+            v-bind:class="get_current_highlight(s.num,s.key)?&quot;playing&quot;:&quot;&quot;">
+            <div class="label">{{String.fromCharCode(s.key)}}</div>
+          </div>
+        </div>
+      </div><br />
+      <div class="controls">
+        <ul class="notes_list" v-if="notes.length&gt;0">
+          <li v-for="(note,id) in notes" v-bind:class="now_note_id-1==id?&quot;playing&quot;:&quot;&quot;">
+            <div class="num"> {{note.num}}</div>
+            <div class="time">{{note.time}}</div>
+          </li>
+        </ul>
+        <button v-on:click="load_sample">Sample</button>
+        <button v-on:click="playnext(1)">Playnext<i class="fa-solid fa-forward-step"></i></button>
+        <button v-if="playing_time&lt;=0" v-on:click="startplay">Startplay<i class="fa-solid fa-play"></i></button>
+        <button v-if="playing_time&gt;1" v-on:click="stopplay">Stopplay<i class="fa-solid fa-pause"></i></button>
+        <button v-if="record_time&lt;=0" v-on:click="start_record">Record<i class="fa-solid fa-circle"></i></button>
+        <button v-if="record_time&gt;1" v-on:click="stop_record">StopRecord<i class="fa-solid fa-stop"></i></button>
+        <button v-on:click="notes=[]">Clear </button>
+        <h4> {{playing_time+record_time}}</h4>
+      </div>
     </div>
   </div>
-</z>
-<!-- partial -->
+  <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.js'></script><script  src="./script.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js'></script>
+  <script src="./script.js"></script>
 
 </body>
+
 </html>

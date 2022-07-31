@@ -5,12 +5,39 @@
   <meta charset="UTF-8">
   <title>CodePen - Clock</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'>
-  <link rel="stylesheet" href="./css/phone/style.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="./style.css">
 
 </head>
 
 <body>
   <!-- partial:index.partial.html -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container"><a class="navbar-brand d-flex align-items-center" href="#header_index"> <img
+          class="rounded-pill" id="logo" src="https://www.emojiall.com/en/header-svg/%F0%9F%90%A8.svg" alt="Avatar Logo"
+          style="width:30px;" /> Xavier's home </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+        aria-controls="#navbar"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item px-3"><a class="nav-link" href="../index.html">HOME</a></li>
+          <li class="nav-item px-3"><a class="nav-link" href="#section_ask">ABOUT</a></li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">WORKS</a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="../Koala/koala.html">KOALA</a></li>
+              <li><a class="dropdown-item" href="../Phone/Phone.html">My Phone</a></li>
+              <li><a class="dropdown-item" href="../Piano/Piano.html">Piano</a></li>
+              <li><a class="dropdown-item" href="../Eleven/Eleven.html">Eleven</a></li>
+              <li><a class="dropdown-item" href="../MyBuylist/MyBuylist.html">MyBuylist</a></li>
+              <li><a class="dropdown-item" href="../Namecard/Namecard.html">Namecard</a></li>
+            </ul>
+          </li>
+          <li class="nav-item px-3"><a class="nav-link" href="#section_subsistence_crisis">NAME CARD</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <div class="phone">
     <div class="top">
       <div class="listener"></div>
@@ -20,7 +47,8 @@
       <h3 class="name">h<span class="t">T</span><span class="c">ㄈ</span></h3>
       <div class="screen">
         <div class="page page1">
-          <div class="status"><i class="fa-solid fa-signal signal"></i><i class="fa-solid fa-battery-full battery"></i>
+          <div class="status"><i class="fa-solid fa-message famessage hide"></i><i
+              class="fa-solid fa-signal signal"></i><i class="fa-solid fa-battery-full battery"></i>
             <h3 class="st_time">10:08 AM</h3>
           </div>
           <div class="weatherbox">
@@ -248,21 +276,190 @@
             </div>
           </div>
           <div class="call_buttom_btn">
-            <div class="btn btn1"><i class="fa-solid fa-keyboard"></i></div>
-            <div class="btn btn2 endcall">
+            <div class="btn call_btn1"><i class="fa-solid fa-keyboard"></i></div>
+            <div class="btn call_btn2 endcall">
               <p>結束通話</p>
             </div>
-            <div class="btn btn3"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+            <div class="btn call_btn3"><i class="fa-solid fa-ellipsis-vertical"></i></div>
           </div>
+        </div>
+        <div class="page page4">
+          <div class="top">
+            <div class="url">
+              <p>http://www.facebook.com.tw/</p><i class="fa-solid fa-arrows-spin"></i>
+            </div>
+          </div>
+          <div class="container">
+            <div class="topbar"><img class="icon"
+                src="http://www.freeiconspng.com/uploads/images-facebook-f-logo-png-transparent-background-page-2-29.png" />
+              <input placeholder="搜尋人、地點、事物" />
+            </div>
+            <div class="cover"> </div>
+            <div class="midbar">
+              <div class="personimg">
+                <div class="names">
+                  <h2 class="chtname"> 蔡皓翔</h2>
+                  <h5 class="engname"> (Hao-Siang Tsai)</h5>
+                </div>
+              </div>
+            </div>
+            <div class="bottombar">
+              <p><i class="fa fa-briefcase"></i><span>曾在宜蘭國際童玩藝術節( YICF, Yi Lan) 工作<br></span><i
+                  class="fa fa-graduation-cap"></i><span>曾就讀台北市立百齡高級中學<br></span><i
+                  class="fa fa-map"></i><span>來自台北市<br></span><i class="fa fa-feed"></i><span>49 人在追蹤</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="page page5">
+          <div class="status"><i class="fa-solid fa-message famessage hide"></i><i
+              class="fa-solid fa-signal signal"></i><i class="fa-solid fa-battery-full battery"></i>
+            <h3 class="st_time">10:08 AM</h3>
+          </div>
+          <div class="messages">
+            <p class="msgs_title">All messages</p>
+            <div class="add_msgbox">
+              <div class="addmsg"><i class="fa-solid fa-plus"></i></div>
+              <p>New message</p>
+            </div>
+            <div class="messagebox">
+              <div class="msbox">
+                <div class="ms_pic"></div>
+                <p class="tit">John</p>
+                <p class="content">Subject:NewSite</p>
+                <p class="ms_time">12:42 PM</p>
+              </div>
+              <div class="msbox">
+                <div class="ms_pic"></div>
+                <p class="tit">Mary</p>
+                <p class="content">New Message</p>
+                <p class="ms_time">12:38 PM</p>
+              </div>
+              <div class="msbox">
+                <div class="ms_pic"></div>
+                <p class="tit">Jerry C</p>
+                <p class="content">Subject:NewSite</p>
+                <p class="ms_time">7:36 AM</p>
+              </div>
+              <div class="msbox">
+                <div class="ms_pic"></div>
+                <p class="tit">Brain Cooper</p>
+                <p class="content">Put Check in your door</p>
+                <p class="ms_time">5:22 AM</p>
+              </div>
+              <div class="msbox">
+                <div class="ms_pic"></div>
+                <p class="tit">04-56385566</p>
+                <p class="content">Have a Nice Day!</p>
+                <p class="ms_time">Yesterday</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page page6"></div>
+        <div class="page page7">
+          <div id="market_top">
+            <div id="icon"></div>
+            <p class="tit">market</p>
+            <div class="market_searchbtn"><i class="fa-solid fa-magnifying-glass"></i></div>
+          </div>
+          <div class="market">
+            <div class="market_apps">
+              <div class="market_app">
+                <div class="app app1"></div>
+                <div class="appinfo">
+                  <p class="appname">Angry Birds</p>
+                  <p class="Company">Rovio Mobile</p>
+                </div>
+                <div class="app_costinfo">
+                  <p>FREE</p>
+                  <div class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                      class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="market_app">
+                <div class="app app2"></div>
+                <div class="appinfo">
+                  <p class="appname">Temple Run</p>
+                  <p class="Company">Imangi Studios</p>
+                </div>
+                <div class="app_costinfo">
+                  <p>FREE</p>
+                  <div class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                      class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                      class="fa-solid fa-star-half-stroke"></i></div>
+                </div>
+              </div>
+              <div class="market_app">
+                <div class="app app3"></div>
+                <div class="appinfo">
+                  <p class="appname">Fruit Ninja</p>
+                  <p class="Company">Halfbrick Studios</p>
+                </div>
+                <div class="app_costinfo">
+                  <p>FREE</p>
+                  <div class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                      class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                      class="fa-solid fa-star-half-stroke"></i></div>
+                </div>
+              </div>
+              <div class="market_app">
+                <div class="app app4"></div>
+                <div class="appinfo">
+                  <p class="appname">Doodle Jump</p>
+                  <p class="Company">Lima Sky LLC</p>
+                </div>
+                <div class="app_costinfo">
+                  <p>FREE</p>
+                  <div class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                      class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                      class="fa-solid fa-star-half-stroke"></i></div>
+                </div>
+              </div>
+              <div class="market_app">
+                <div class="app app5"></div>
+                <div class="appinfo">
+                  <p class="appname">Facebook</p>
+                  <p class="Company">Meta Platforms, Inc.</p>
+                </div>
+                <div class="app_costinfo">
+                  <p>FREE</p>
+                  <div class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                      class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="market_app">
+                <div class="app app6"></div>
+                <div class="appinfo">
+                  <p class="appname">Nike</p>
+                  <p class="Company">Nike, Inc.</p>
+                </div>
+                <div class="app_costinfo">
+                  <p>FREE</p>
+                  <div class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                      class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                      class="fa-solid fa-star-half-stroke"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page page8"></div>
+        <div class="search hide">
+          <div class="search_icon"></div>
+          <input class="search_input" placeholder=" Google" />
+          <div class="search_mic"><i class="fa-solid fa-microphone"></i></div>
         </div>
       </div>
       <div class="bottom"><i class="fa-solid fa-house house"></i><i class="fa-solid fa-align-justify shake"></i><i
-          class="fa-solid fa-share return"></i><i class="fa-solid fa-magnifying-glass"></i></div>
+          class="fa-solid fa-share return"></i><i class="fa-solid fa-magnifying-glass searchbtn"></i></div>
     </div>
   </div>
   <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
-  <script src="./js/phone/script.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js'></script>
+  <script src="./script.js"></script>
 
 </body>
 

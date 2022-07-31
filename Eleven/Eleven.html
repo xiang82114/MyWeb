@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - 品牌視覺引導作業</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Fjalla+One&amp;display=swap'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container"><a class="navbar-brand d-flex align-items-center" href="#header_index"> <img
+          class="rounded-pill" id="logo" src="https://www.emojiall.com/en/header-svg/%F0%9F%90%A8.svg" alt="Avatar Logo"
+          style="width:30px;" /> Xavier's home </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+        aria-controls="#navbar"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item px-3"><a class="nav-link" href="../index.html">HOME</a></li>
+          <li class="nav-item px-3"><a class="nav-link" href="#section_ask">ABOUT</a></li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">WORKS</a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="../Koala/koala.html">KOALA</a></li>
+              <li><a class="dropdown-item" href="../Phone/Phone.html">My Phone</a></li>
+              <li><a class="dropdown-item" href="../Piano/Piano.html">Piano</a></li>
+              <li><a class="dropdown-item" href="../Eleven/Eleven.html">Eleven</a></li>
+              <li><a class="dropdown-item" href="../MyBuylist/MyBuylist.html">MyBuylist</a></li>
+              <li><a class="dropdown-item" href="../Namecard/Namecard.html">Namecard</a></li>
+            </ul>
+          </li>
+          <li class="nav-item px-3"><a class="nav-link" href="#section_subsistence_crisis">NAME CARD</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="app"><img class="appicon" src="https://www.7-11.com.tw/images/e_btn4.gif" alt="" /></div>
+  <div class="header">
+    <div class="logo line1-left"></div>
+    <div class="logo line1-right"></div>
+    <div class="logo line2-left"></div>
+    <div class="logo line2-right"></div>
+    <div class="logo line3-left"></div>
+    <div class="logo line3-right"></div><img class="icon"
+      src="data:image/png;base64,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"
+      alt="" />
+  </div>
+  <div class="content content_white">
+    <div class="max_width">
+      <h5>©2022 President Chain Store Corporation.All rights reserved.</h5>
+      <h1>7-Eleven</h1>
+      <h1 class="small_english">7-Eleven（商標圖案作7-ᴇʟᴇᴠᴇn）是跨國連鎖便利店集團，成立於1927年，最初是美國達拉斯南方公司的冰屋店面。</h1>
+      <div class="title_hr"></div><br />
+      <h2>1928年至1946年間，公司名為Tote'm Stores。</h2>
+      <h2 class="small_english">1991年，日本子公司伊藤洋華堂收購了公司70%的股份後，於2005年改組為日本7-Eleven的子公司。目前7-Eleven的品牌權益由日本的7&I控股持有。</h2>
+      <br />
+      <h3>截至2018年8月，7-Eleven全球門店總數達66,581家</h3>
+      <h3 class="small_english">
+        分佈於全球17個國家和地區，包括日本、美國、加拿大、墨西哥、中國大陸、香港、澳門、澳大利亞、臺灣、新加坡、泰國、馬來西亞、菲律賓、印度、韓國、挪威、瑞典、丹麥、越南與阿聯。與FamilyMart、Lawson、Circle
+        K等便利店互相競爭。</h3><br />
+      <hr />
+      <h5>代表配色</h5>
+      <div class="color_chip">
+        <div class="color_tag">#f58319</div>
+        <div class="color_block color_block_orange"></div>
+      </div>
+      <div class="color_chip">
+        <div class="color_tag">#008161</div>
+        <div class="color_block color_block_green"></div>
+      </div>
+      <div class="color_chip">
+        <div class="color_tag">#ee1429</div>
+        <div class="color_block color_block_red"></div>
+      </div>
+      <div class="color_chip">
+        <div class="color_tag">#f3f7f7</div>
+        <div class="color_block color_block_white"></div>
+      </div>
+      <h5>BUTTON EXAMPLE</h5>
+      <div class="button button_white">按鈕範例</div>
+      <div class="button button_orange">按鈕範例</div>
+      <div class="button button_green">按鈕範例</div>
+      <div class="button button_red">按鈕範例</div>
+    </div>
+  </div>
+  <div class="content content_orange">
+    <div class="max_width">
+      <h5>Style Guidnline</h5>
+      <h1>品牌視覺引導-40px 大標題</h1>
+      <h1 class="small_english">English Style duideline for h1 title</h1>
+      <div class="title_hr"></div><br />
+      <h2>品牌視覺引導-30px 中標題</h2>
+      <h2 class="small_english">English Style duideline for h1 title</h2><br />
+      <h3>品牌視覺引導-20px 小標題</h3>
+      <h3 class="small_english">English Style duideline for h1 title</h3><br />
+      <hr />
+      <h5>VI COLORS</h5>
+      <div class="color_chip">
+        <div class="color_tag">#f58319</div>
+        <div class="color_block color_block_orange"></div>
+      </div>
+      <div class="color_chip">
+        <div class="color_tag">#008161</div>
+        <div class="color_block color_block_green"></div>
+      </div>
+      <div class="color_chip">
+        <div class="color_tag">#ee1429</div>
+        <div class="color_block color_block_red"></div>
+      </div>
+      <div class="color_chip">
+        <div class="color_tag">#f3f7f7</div>
+        <div class="color_block color_block_white"></div>
+      </div>
+      <h5>BUTTON EXAMPLE</h5>
+      <div class="button">按鈕範例</div>
+      <div class="button button_green">按鈕範例</div>
+      <div class="button button_red">按鈕範例</div>
+      <div class="button button_white">按鈕範例</div>
+    </div>
+  </div>
+  <div class="content content_green">
+    <div class="max_width">
+      <h5>Style Guidnline</h5>
+      <h1>品牌視覺引導-40px 大標題</h1>
+      <h1 class="small_english">English Style duideline for h1 title</h1>
+      <div class="title_hr"></div><br />
+      <h2>品牌視覺引導-30px 中標題</h2>
+      <h2 class="small_english">English Style duideline for h1 title</h2><br />
+      <h3>品牌視覺引導-20px 小標題</h3>
+      <h3 class="small_english">English Style duideline for h1 title</h3><br />
+      <hr />
+      <h5>VI COLORS</h5>
+      <div class="color_chip">
+        <div class="color_tag">#f58319</div>
+        <div class="color_block color_block_orange"></div>
+      </div>
+      <div class="color_chip">
+        <div class="color_tag">#008161</div>
+        <div class="color_block color_block_green"></div>
+      </div>
+      <div class="color_chip">
+        <div class="color_tag">#ee1429</div>
+        <div class="color_block color_block_red"></div>
+      </div>
+      <div class="color_chip">
+        <div class="color_tag">#f3f7f7</div>
+        <div class="color_block color_block_white"></div>
+      </div>
+      <h5>BUTTON EXAMPLE</h5>
+      <div class="button button_orange">按鈕範例</div>
+      <div class="button">按鈕範例</div>
+      <div class="button button_red">按鈕範例</div>
+      <div class="button button_white">按鈕範例</div>
+    </div>
+  </div>
+  <div class="content content_red">
+    <div class="max_width">
+      <h5>Style Guidnline</h5>
+      <h1>品牌視覺引導-40px 大標題</h1>
+      <h1 class="small_english">English Style duideline for h1 title</h1>
+      <div class="title_hr"></div><br />
+      <h2>品牌視覺引導-30px 中標題</h2>
+      <h2 class="small_english">English Style duideline for h1 title</h2><br />
+      <h3>品牌視覺引導-20px 小標題</h3>
+      <h3 class="small_english">English Style duideline for h1 title</h3><br />
+      <hr />
+      <h5>VI COLORS</h5>
+      <div class="color_chip">
+        <div class="color_tag">#f58319</div>
+        <div class="color_block color_block_orange"></div>
+      </div>
+      <div class="color_chip">
+        <div class="color_tag">#008161</div>
+        <div class="color_block color_block_green"></div>
+      </div>
+      <div class="color_chip">
+        <div class="color_tag">#ee1429</div>
+        <div class="color_block color_block_red"></div>
+      </div>
+      <div class="color_chip">
+        <div class="color_tag">#f3f7f7</div>
+        <div class="color_block color_block_white"></div>
+      </div>
+      <h5>BUTTON EXAMPLE</h5>
+      <div class="button button_orange">按鈕範例</div>
+      <div class="button button_green">按鈕範例</div>
+      <div class="button">按鈕範例</div>
+      <div class="button button_white">按鈕範例</div>
+    </div>
+  </div>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js'></script>
+  <script src="./script.js"></script>
+
+</body>
+
+</html>

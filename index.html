@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>CodePen - 個人網站</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css'>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
   <link rel="stylesheet" href="./style.css">
 
@@ -12,21 +13,24 @@
 <body>
   <!-- partial:index.partial.html -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container-fluid"> <a class="navbar-brand d-flex align-items-center" href="#header_index"> <img
+    <div class="container"><a class="navbar-brand d-flex align-items-center" href="#header_index"> <img
           class="rounded-pill" id="logo" src="https://www.emojiall.com/en/header-svg/%F0%9F%90%A8.svg" alt="Avatar Logo"
           style="width:30px;" /> Xavier's home </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
         aria-controls="#navbar"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav ms-auto">
+          <li class="nav-item px-3"><a class="nav-link" href="./index.html">HOME</a></li>
           <li class="nav-item px-3"><a class="nav-link" href="#section_ask">ABOUT</a></li>
           <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">WORKS</a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="./Koala.html">KOALA</a></li>
-              <li><a class="dropdown-item" href="./Phone.html">My Phone</a></li>
+              <li><a class="dropdown-item" href="./Koala/koala.html">KOALA</a></li>
+              <li><a class="dropdown-item" href="./Phone/Phone.html">My Phone</a></li>
               <li><a class="dropdown-item" href="./Piano/Piano.html">Piano</a></li>
-              <li><a class="dropdown-item" href="./Namecard/Namecard.html">NameCard</a></li>
+              <li><a class="dropdown-item" href="./Eleven/Eleven.html">Eleven</a></li>
+              <li><a class="dropdown-item" href="./MyBuylist/MyBuylist.html">MyBuylist</a></li>
+              <li><a class="dropdown-item" href="./Namecard/Namecard.html">MyBuylist</a></li>
             </ul>
           </li>
           <li class="nav-item px-3"><a class="nav-link" href="#section_subsistence_crisis">NAME CARD</a></li>
@@ -36,42 +40,134 @@
   </nav>
   <header class="jumbotron" id="header_index">
     <div class="container">
-      <h1 data-0="transform: translateY(-50px)" data-500="transform: translateY(100px)">XAVIER</h1>
-      <hr />
-      <h4>My First Web</h4>
+      <div class="namecard">
+        <div class="pic"></div>
+        <div class="info">
+          <h4>Front-end engineer</h4>
+          <hr />
+          <h4 class="title">Name</h4>
+          <h4>Jay Chou</h4><br />
+          <h4 class="title">TEL</h4>
+          <h4>0963-XXX-XXX</h4><br />
+          <h4 class="title">ADDRESS</h4>
+          <h4>Taipei XX road</h4><br />
+          <h4 class="title">E-MAIL</h4>
+          <h4>xiang82114@gmail.com </h4>
+        </div>
+      </div>
     </div>
   </header>
-  <section id="section_ask">
-    <div class="container">
-      <div class="row"></div>
-    </div>
-  </section>
   <section id="section_about">
-    <div class="container">
-      <div class="row"> </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6 img"></div>
+        <div class="col-sm-6">
+          <div class="introduction">
+            <h2>Hi! I'm <b>Jay Chou</b></h2>
+            <p>國立宜蘭大學-資訊工程所 碩士畢業
+              <br>曾擔任新誼整合科技-專案工程師<br>專長為軟體開發維護，<br>未來希望成為一名出色的網頁設計師，<br>現已朝前端工程師邁進，<br>期待能創造出許多互動性新型網頁。
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-  <section id="section_active">
+  <section id="section_skills">
     <div class="container">
-      <div class="row"> </div>
-    </div>
-  </section>
-  <section id="section_born">
-    <div class="container">
-      <div class="row"> </div>
-    </div>
-  </section>
-  <section id="section_subsistence_crisis">
-    <div class="container">
-      <div class="row"> </div>
+      <div class="row">
+        <div class="col-sm-12 my-2">
+          <h2>MY SKILLS</h2>
+        </div>
+        <div class="col-sm-12 mb-2">
+          <div class="hr d-flex justify-content-center">
+            <hr />
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="col-sm-6 my-5">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="icon html5 d-flex justify-content-center align-items-center" style="--clr:#e44f26"><i
+                    class="fa-brands fa-html5"></i></div>
+              </div>
+              <div class="col-sm-6">
+                <h4>HTML</h4>
+                <p>XXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 my-5">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="icon css3 d-flex justify-content-center align-items-center" style="--clr:#33a9dc"><i
+                    class="fa-brands fa-css3-alt"></i></div>
+              </div>
+              <div class="col-sm-6">
+                <h4>CSS</h4>
+                <p>XXXXXXXXXXXXXXXXXXXXXXXXXX </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 my-5">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="icon js d-flex justify-content-center align-items-center" style="--clr:#f7e018"><i
+                    class="fab fa-js"></i></div>
+              </div>
+              <div class="col-sm-6">
+                <h4>JAVASCRIPT/JQuery</h4>
+                <p>XXXXXXXXXXXXXXXXXXXXXXXXXX </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="col-sm-6 my-5">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="icon bootstrap d-flex justify-content-center align-items-center" style="--clr:#563d7c"><i
+                    class="fa-brands fa-bootstrap"></i></div>
+              </div>
+              <div class="col-sm-6">
+                <h4>Bootstrap</h4>
+                <p>XXXXXXXXXXXXXXXXXXXXXXXXXX </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 my-5">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="icon vue d-flex justify-content-center align-items-center" style="--clr:#00c180"><i
+                    class="fa-brands fa-vuejs"></i></div>
+              </div>
+              <div class="col-sm-6">
+                <h4>Vue</h4>
+                <p>XXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 my-5">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="icon db d-flex justify-content-center align-items-center" style="--clr:blue"><i
+                    class="fas fa-database"></i></div>
+              </div>
+              <div class="col-sm-6">
+                <h4>MySQL</h4>
+                <p>XXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <footer class="jumbotron">
     <div class="container">
-      <h2>Want to know more about me？</h2>
+      <h2>To Know Me？</h2>
       <input class="form-control" placeholder="E-mail" />
       <hr />
-      <button class="btn btn-secondary">Give me your E-mail</button>
+      <button class="btn btn-secondary">Mail</button>
     </div>
   </footer>
   <!-- partial -->
