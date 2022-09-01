@@ -161,7 +161,8 @@ section#section_about .col-sm-6.img {
 }
 
 section#section_about .introduction {
-  padding: 125px 20px;
+  padding: 125px 50px;
+  /* text-align: center; */
 }
 
 section#section_about .introduction h2 {
@@ -271,4 +272,73 @@ footer.jumbotron .container {
 
 footer.jumbotron input {
   max-width: 300px;
+}
+
+svg {
+  width: 50%;
+}
+
+#pic5 {
+  stroke: black;
+  stroke-width: 2px;
+  fill: none;
+}
+
+#pic5 * {
+  transform-box: fill-box;
+}
+
+#pic5 circle {
+  stroke: none;
+  fill: red;
+}
+
+#pic5 text {
+  fill: black;
+  stroke: none;
+  font-family: 微軟正黑體;
+  font-size: 10px;
+}
+
+#pic5 .frame_outer,
+#pic5 .frame_inner,
+#pic5 .neck,
+#pic5 .bottom {
+  transform: scale(0);
+  transform-origin: center bottom;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+}
+
+#pic5 .screen_content {
+  opacity: 0;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+
+#pic5 .computer_name {
+  opacity: 0;
+  transition-duration: 0.5s;
+}
+
+#pic5:hover .frame_outer,
+#pic5:hover .frame_inner {
+  transform: scale(1);
+  transition-delay: 0.5s;
+}
+
+#pic5:hover .neck,
+#pic5:hover .bottom {
+  transform: scale(1);
+  transition-delay: 0s;
+}
+
+#pic5:hover .screen_content {
+  opacity: 1;
+  transition-delay: 1s;
+}
+
+#pic5:hover .computer_name {
+  opacity: 1;
+  transition-delay: 1s;
 }

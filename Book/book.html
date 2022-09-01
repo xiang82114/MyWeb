@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>v-if / v-show 條件渲染與資料的後處理-實作博客來</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid"><a class="navbar-brand d-flex align-items-center" href="#header_index"> <img
+          class="rounded-pill" id="logo" src="https://www.emojiall.com/en/header-svg/%F0%9F%90%A8.svg" alt="Avatar Logo"
+          style="width:30px;" /> Xavier's home </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+        aria-controls="#navbar"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item px-3"><a class="nav-link" href="./index.html">HOME</a></li>
+          <li class="nav-item px-3"><a class="nav-link"
+              href="https://www.cakeresume.com/s--axubsKO30ZWsQ4WFci1ygQ--/hao-xiang-tsai">ABOUT</a></li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">WORKS</a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="../Weatherbox/box.html">Box</a></li>
+              <li><a class="dropdown-item" href="../Phone/Phone.html">MyPhone</a></li>
+              <li><a class="dropdown-item" href="../Eleven/Eleven.html">Eleven</a></li>
+              <li><a class="dropdown-item" href="../Koala/koala.html">KOALA</a></li>
+              <li><a class="dropdown-item" href="../MyBuylist/MyBuylist.html">MyBuylist</a></li>
+              <li><a class="dropdown-item" href="../Yellowstudio/yellow.html">Yellowstudio</a></li>
+              <li><a class="dropdown-item active" href="./book.html">BookStore</a></li>
+              <li><a class="dropdown-item" href="../Hahow/hahow.html">Hahow</a></li>
+              <li><a class="dropdown-item" href="../Piano/Piano.html">Piano</a></li>
+            </ul>
+          </li>
+          <li class="nav-item px-3"><a class="nav-link" href="http://18.183.109.75/">V-NIGHTMARKET</a></li>
+          <li class="nav-item px-3"><a class="nav-link" href="../Login/login.html">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="app">
+    <h1>使用Vue.js計算呈現資訊/v-if</h1>
+    <h3>實戰博客來排行榜資料轉換html<span><a href="https://www.books.com.tw/web/sys_tdrntb/books/?loc=menu_th_1_001"
+          target="_blank"><img class="bkl_icon" src="http://pk.ixpanel.com/images/pk/201108/0824/BOOKS.gif" /></a><a
+          href="https://www.books.com.tw/web/sys_tdrntb/books/?loc=menu_th_1_001" target="_blank">(連結網址)</a></span></h3>
+    <br />
+    <label>詳細模式
+      <input type="checkbox" v-model="model_detail" />
+    </label>
+    <label>優惠價</label><span v-for="(id,book) in books">
+      <label>{{id+1}}</label>
+      <input type="checkbox" v-model="book.is_discount" /></span>
+    <label>小呈現
+      <input type="radio" v-model="model_size" value="small" />
+    </label>
+    <label>大呈現
+      <input type="radio" v-model="model_size" value="big" />
+    </label><br />
+    <div class="book {{model_detail?'detail':''}} {{model_size}}" v-for="book in books"><a href="{{book.link_book}}"
+        target="_blank"><img src="{{book.img}}" /></a>
+      <div class="infos">
+        <h2 class="name" v-if="!model_detail"><a href="{{book.link_book}}" target="_blank">
+            {{book.name.substring(0,18)}}</a></h2>
+        <h2 class="name" v-if="model_detail"><a href="{{book.link_book}}" target="_blank"> {{book.name}}</a></h2>
+        <h4 class="author">作者:<a href="{{book.link_author}}" target="_blank">{{book.author}}</a></h4>
+        <h4 class="publish" v-if="model_detail">出版社: {{book.publish_house}}</h4>
+        <h4 class="price" v-if="book.is_discount">優惠價: <span class="red">{{book.discount*100}}</span><span>折</span><span
+            class="red">{{Math.round(book.price*book.discount)}}</span><span>元</span></h4>
+        <h4 class="price" v-if="!book.is_discount">價錢: <span class="red">{{book.price}}</span><span>元</span></h4>
+        <h4 class="date" v-if="model_detail">出版社: {{book.date}}</h4>
+      </div>
+    </div>
+  </div>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.js'></script>
+  <script src="./script.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js'></script>
+</body>
+
+</html>
