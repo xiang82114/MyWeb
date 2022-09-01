@@ -1,13 +1,26 @@
 @charset "UTF-8";
+
 * {
   font-family: 微軟正黑體;
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
   font-weight: 600;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -17,18 +30,22 @@ html, body {
 nav.navbar.navbar-expand-lg.navbar-dark.fixed-top {
   transition: 0.5s;
 }
+
 nav.navbar.navbar-expand-lg.navbar-dark.fixed-top a {
   color: white;
   transition: 0.5s;
   font-size: 20px;
 }
+
 nav.navbar.navbar-expand-lg.navbar-dark.fixed-top a:hover {
   color: #ECB390;
 }
+
 nav.navbar.navbar-expand-lg.navbar-dark.fixed-top a.dropdown-item:hover {
   color: #eee;
   background-color: rgba(238, 238, 238, 0.6);
 }
+
 nav.navbar.navbar-expand-lg.navbar-dark.fixed-top ul.dropdown-menu {
   margin: 20px;
   background-color: rgba(0, 0, 0, 0.3);
@@ -38,40 +55,46 @@ nav.navbar.navbar-expand-lg.navbar-light.fixed-top a {
   transition: 0.5s;
   font-size: 20px;
 }
+
 nav.navbar.navbar-expand-lg.navbar-light.fixed-top a:hover {
   color: #ECB390;
 }
 
 .jumbotron {
   margin-bottom: 0px;
-  background-image: url("https://i.imgur.com/J0JWXka.png");
+  background-image: url("./img/head.JPG");
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right 100px center;
+  background-size: 150%;
+  background-position: right 70% top 60%;
   background-color: #565656;
 }
+
 .jumbotron .container {
   padding: 100px 0px 50px;
   color: white;
 }
+
 .jumbotron .namecard {
   height: 400px;
   background-color: rgba(0, 0, 0, 0.7);
   position: relative;
   font-size: 20px;
 }
+
 .jumbotron .namecard .pic {
   width: 300px;
   height: 300px;
-  background-image: url("https://i.imgur.com/J0JWXka.png");
+  background-image: url("./img/head.JPG");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-color: #fff;
+  background-position: center center;
   position: absolute;
   right: 50px;
   top: 50%;
   transform: translateY(-50%);
 }
+
 .jumbotron .namecard .info {
   width: calc(100% - 500px - 50px);
   position: absolute;
@@ -79,15 +102,18 @@ nav.navbar.navbar-expand-lg.navbar-light.fixed-top a:hover {
   top: 50%;
   transform: translateY(-50%);
 }
+
 .jumbotron .namecard .info hr {
   border: 1px solid #eee;
   margin: 20px auto;
 }
+
 .jumbotron .namecard .info h4 {
   color: rgba(238, 238, 238, 0.8);
   font-weight: normal;
   display: inline-block;
 }
+
 .jumbotron .namecard .info .title {
   color: white;
   width: 150px;
@@ -96,6 +122,7 @@ nav.navbar.navbar-expand-lg.navbar-light.fixed-top a:hover {
 section {
   padding: 50px 0px;
 }
+
 section img {
   height: 300px;
   position: absolute;
@@ -103,6 +130,7 @@ section img {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
 section .img_warp {
   height: 300px;
   width: 300px;
@@ -112,6 +140,7 @@ section .img_warp {
   overflow: hidden;
   position: relative;
 }
+
 @media screen and (max-width: 1800px) {
   section .img_warp {
     background-position: center -230px;
@@ -122,18 +151,23 @@ section#section_about {
   background-color: #CEE5D0;
   padding: 0;
 }
+
 section#section_about .col-sm-6.img {
-  background-image: url("https://pic.pimg.tw/volvo2266/1483538279-633293117.jpg");
+  background-image: url("./img/mypic.JPG");
   background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
   height: 500px;
 }
+
 section#section_about .introduction {
   padding: 125px 20px;
 }
+
 section#section_about .introduction h2 {
   font-weight: normal;
 }
+
 section#section_about .introduction p {
   font-size: 16px;
   font-weight: bold;
@@ -143,17 +177,35 @@ section#section_about .introduction p {
   background-color: #1c242f;
   color: white;
 }
+
 #section_skills .col-sm-12 .hr {
   width: 100%;
   text-align: center;
 }
+
 #section_skills .col-sm-12 .hr hr {
   width: 200px;
   border-top: 1px solid #eee;
 }
+
 #section_skills .col-sm-6 .col-sm-6 {
   position: relative;
 }
+
+#section_skills .col-sm-6 .col-sm-6 .progress-line {
+  height: 10px;
+  width: 100%;
+  background-color: #f0f0f0;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05),
+    0px 1px rgba(255, 255, 255, 0.8);
+}
+
+#section_skills .col-sm-6 .col-sm-6 .progress-line span {
+  height: 100%;
+  width: 80%;
+  background-color: #6665ee;
+}
+
 #section_skills .col-sm-6 .col-sm-6 .icon {
   width: 100px;
   height: 100px;
@@ -161,11 +213,13 @@ section#section_about .introduction p {
   border-radius: 50%;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
+
 #section_skills .col-sm-6 .col-sm-6 .icon i {
   font-size: 60px;
   -webkit-text-stroke: 2px var(--clr);
   color: transparet;
 }
+
 #section_skills .col-sm-6 .col-sm-6 .icon:before {
   content: "";
   position: absolute;
@@ -182,24 +236,31 @@ section#section_about .introduction p {
   font-size: 60px;
   color: var(--clr);
 }
+
 #section_skills .col-sm-6 .col-sm-6 .icon:hover:before {
   height: 100%;
 }
+
 #section_skills .col-sm-6 .col-sm-6 .html5:hover:before {
   content: "";
 }
+
 #section_skills .col-sm-6 .col-sm-6 .css3:nth-child(1):before {
   content: "";
 }
+
 #section_skills .col-sm-6 .col-sm-6 .js:nth-child(1):before {
   content: "";
 }
+
 #section_skills .col-sm-6 .col-sm-6 .bootstrap:nth-child(1):before {
   content: "";
 }
+
 #section_skills .col-sm-6 .col-sm-6 .vue:nth-child(1):before {
   content: "";
 }
+
 #section_skills .col-sm-6 .col-sm-6 .db:nth-child(1):before {
   content: "";
 }
@@ -207,6 +268,7 @@ section#section_about .introduction p {
 footer.jumbotron .container {
   padding: 130px 0px 270px 0px;
 }
+
 footer.jumbotron input {
   max-width: 300px;
 }
