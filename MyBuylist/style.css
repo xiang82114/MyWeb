@@ -1,10 +1,12 @@
 @charset "UTF-8";
+
 * {
   font-family: "Roboto Condensed", sans-serif, "微軟正黑體";
   position: relative;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -18,31 +20,48 @@ html, body {
   background-position: center;
   overflow: hidden;
 }
+
 @media screen and (max-width: 1800px) {
-  html, body {
+
+  html,
+  body {
     background-position: center -230px;
   }
 }
+
 @media screen and (max-width: 1400px) {
-  html, body {
+
+  html,
+  body {
     background-position: center -200px;
   }
 }
+
 @media screen and (max-width: 1300px) {
-  html, body {
+
+  html,
+  body {
     background-position: center -150px;
   }
 }
+
 @media screen and (max-width: 1000px) {
-  html, body {
+
+  html,
+  body {
     background-position: center center;
   }
-  html #buylist, body #buylist {
+
+  html #buylist,
+  body #buylist {
     top: 110px;
   }
 }
+
 @media screen and (max-width: 800px) {
-  html #buylist, body #buylist {
+
+  html #buylist,
+  body #buylist {
     top: 70px;
   }
 }
@@ -60,6 +79,7 @@ html, body {
   min-width: 580px;
   max-width: 850px;
 }
+
 #buylist #title {
   position: relative;
   left: -20px;
@@ -70,6 +90,7 @@ html, body {
   background-size: contain;
   text-align: center;
 }
+
 #buylist #title h1 {
   padding: 10px 20px;
   margin: -20px -20px 20px -65px;
@@ -78,6 +99,7 @@ html, body {
   font-weight: 600;
   top: 20px;
 }
+
 #buylist .buy_item_add {
   padding: 5px;
   list-style: none;
@@ -85,6 +107,7 @@ html, body {
   margin-top: 10px;
   font-weight: 900;
 }
+
 #buylist .buy_item_add input {
   width: 150px;
   border: 1px solid #444;
@@ -93,6 +116,7 @@ html, body {
   background-color: transparent;
   top: -10px;
 }
+
 #buylist .buy_item_add .addbtn {
   display: flex;
   justify-content: center;
@@ -103,6 +127,7 @@ html, body {
   transform: translateX(-50%);
   cursor: pointer;
 }
+
 #buylist .buy_item_add .addbtn .icon {
   width: 30px;
   height: 30px;
@@ -111,26 +136,32 @@ html, body {
   background-repeat: no-repeat;
   display: inline-block;
 }
+
 #buylist .buy_item_add .addbtn p {
   margin: 5px 0px;
   display: inline-block;
 }
+
 #buylist .buy_item_add .addbtn:hover {
   background-color: #FF3D4A;
   color: white;
 }
+
 #buylist .buy_item_add .price {
   width: 90%;
   display: inline-block;
   text-align: right;
 }
+
 #buylist #item_list {
   padding: 5px;
   margin-top: 10px;
 }
+
 #buylist #item_list #buy_items {
   padding: 0;
 }
+
 #buylist .control_panel {
   position: absolute;
   right: 50px;
@@ -138,6 +169,7 @@ html, body {
   background-color: #fff27b;
   transform: rotate(-3deg);
 }
+
 #buylist .control_panel .add_label {
   margin: 0 0 5px 0;
   width: 100px;
@@ -158,32 +190,39 @@ html, body {
   display: inline-block;
   cursor: pointer;
 }
+
 @keyframes drop {
   0% {
     left: -10px;
     top: 0px;
   }
+
   25% {
     left: 10px;
   }
+
   50% {
     left: -10px;
   }
+
   75% {
     left: 10px;
   }
+
   100% {
     left: 0px;
     top: 100px;
     opacity: 0;
   }
 }
+
 .buy_item p {
   padding: 20px 5px;
   top: 10px;
   margin-left: 5px;
   transform: rotate(-3deg);
 }
+
 .buy_item .price {
   display: inline-block;
   position: absolute;
@@ -194,9 +233,11 @@ html, body {
   background-color: #FFC954;
   transform: rotate(-3deg);
 }
+
 .buy_item .price::after {
   content: " $";
 }
+
 .buy_item .del_btn {
   display: inline-block;
   position: absolute;
@@ -206,6 +247,7 @@ html, body {
   top: 10px;
   cursor: pointer;
 }
+
 .buy_item .del_btn:hover {
   background-color: #FF3D4A;
   color: white;
@@ -216,6 +258,7 @@ html, body {
   color: #F3F3F3;
   margin-top: 30px;
 }
+
 .total .price {
   background-color: transparent;
 }
@@ -228,6 +271,7 @@ html, body {
   bottom: -50px;
   transition: 1s;
 }
+
 #sticky_note #note {
   width: 30px;
   height: 30px;
@@ -238,13 +282,18 @@ html, body {
   z-index: 1;
   transition: 2s;
 }
+
 #sticky_note #hand {
   width: 100px;
   height: 100px;
-  background-image: url("https://i.imgur.com/RGT41aI.png");
+  background-image: url("./img/hand.png");
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
   top: 50px;
   z-index: 2;
+}
+
+nav {
+  background-color: #000;
 }

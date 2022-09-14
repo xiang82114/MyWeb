@@ -1,41 +1,81 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>CodePen - 11-8 前端框架Vue.js-綜合案例-使用hahow課程資料</title>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
-
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="./style.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
 </head>
+
 <body>
-<!-- partial:index.partial.html -->
-<div class="navbar"><img class="info" src="https://2017.awiclass.monoame.com/img/hahow_progress.png" alt=""/></div>
-<div id="app">
-  <div class="classbox" v-for="cls in classes">
-    <div class="teacher" v-bind:style="'background-image:url('+cls.owner.profileImageUrl+')'"></div>
-    <div class="top">
-      <div class="classpicture" v-bind:style="'background-image:url('+cls.coverImage.url+')'"></div>
-      <div class="tag"> 募資中</div>
-      <div class="bookbtn"><i class="fa fa-bookmark-o"></i></div>
-    </div>
-    <div class="bottom">
-      <h1 class="classtitle">{{cls.title}}</h1>
-      <div class="texts">
-        <div class="pricerow">
-          <div class="prepice">預購價<span class="orange">NT${{cls.preOrderedPrice}}</span></div>
-          <div class="lastday">剩<span class="orange">{{parseInt((new Date(cls.proposalDueTime)-new Date('2016/10/14'))/1000/60/60/24)}}天</span></div>
-        </div>
-        <div class="progressbar">
-          <div class="valuebar" v-bind:style="'width:'+100*(cls.numSoldTickets/cls.successCriteria.numSoldTickets)+'%'"></div>
-        </div>
-        <div class="nowpeople"> 已募資<span class="orange">{{cls.numSoldTickets}}/{{cls.successCriteria.numSoldTickets}}人        </span></div>
+  <!-- partial:index.partial.html -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid"><a class="navbar-brand d-flex align-items-center" href="#header_index"> <img
+          class="rounded-pill" id="logo" src="https://www.emojiall.com/en/header-svg/%F0%9F%90%A8.svg" alt="Avatar Logo"
+          style="width:30px;" /> Xavier's home </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+        aria-controls="#navbar"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item px-3"><a class="nav-link" href="../index.html">HOME</a></li>
+          <li class="nav-item px-3"><a class="nav-link"
+              href="https://www.cakeresume.com/s--axubsKO30ZWsQ4WFci1ygQ--/hao-xiang-tsai" target="_blank">ABOUT</a>
+          </li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">WORKS</a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="../Weatherbox/box.html">WeatherBox</a></li>
+              <li><a class="dropdown-item" href="../Phone/Phone.html">MyPhone</a></li>
+              <li><a class="dropdown-item" href="../Eleven/Eleven.html">Eleven</a></li>
+              <li><a class="dropdown-item" href="../Koala/koala.html">KOALA</a></li>
+              <!-- <li><a class="dropdown-item" href="../MyBuylist/MyBuylist.html">MyBuylist</a></li> -->
+              <li><a class="dropdown-item" href="../Yellowstudio/yellow.html" target="_blank">Yellowstudio</a></li>
+              <li><a class="dropdown-item" href="../Book/book.html">BookStore</a></li>
+              <li><a class="dropdown-item active" href="./hahow.html">Hahow</a></li>
+              <li><a class="dropdown-item" href="../Piano/Piano.html">Piano</a></li>
+            </ul>
+          </li>
+          <li class="nav-item px-3"><a class="nav-link" href="http://18.183.109.75/">V-Nightmarket</a></li>
+          <li class="nav-item px-3"><a class="nav-link" href="../Login/login.html">Login</a></li>
+        </ul>
       </div>
-      <div class="orangebar"></div>
+    </div>
+  </nav>
+  <div class="navbar2"><img class="info" src="https://2017.awiclass.monoame.com/img/hahow_progress.png" alt="" /></div>
+  <div id="app">
+    <div class="classbox" v-for="cls in classes">
+      <div class="teacher" v-bind:style="'background-image:url('+cls.owner.profileImageUrl+')'"></div>
+      <div class="top">
+        <div class="classpicture" v-bind:style="'background-image:url('+cls.coverImage.url+')'"></div>
+        <div class="tag"> 募資中</div>
+        <div class="bookbtn"><i class="fa fa-bookmark-o"></i></div>
+      </div>
+      <div class="bottom">
+        <h1 class="classtitle">{{cls.title}}</h1>
+        <div class="texts">
+          <div class="pricerow">
+            <div class="prepice">預購價<span class="orange">NT${{cls.preOrderedPrice}}</span></div>
+            <div class="lastday">剩<span class="orange">{{parseInt((new Date(cls.proposalDueTime)-new
+                Date('2016/10/14'))/1000/60/60/24)}}天</span></div>
+          </div>
+          <div class="progressbar">
+            <div class="valuebar"
+              v-bind:style="'width:'+100*(cls.numSoldTickets/cls.successCriteria.numSoldTickets)+'%'"></div>
+          </div>
+          <div class="nowpeople"> 已募資<span class="orange">{{cls.numSoldTickets}}/{{cls.successCriteria.numSoldTickets}}人
+            </span></div>
+        </div>
+        <div class="orangebar"></div>
+      </div>
     </div>
   </div>
-</div>
-<!-- partial -->
+  <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.js'></script><script  src="./script.js"></script>
-
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.js'></script>
+  <script src="./script.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js'></script>
 </body>
+
 </html>

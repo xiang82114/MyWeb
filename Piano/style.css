@@ -1,11 +1,13 @@
 @charset "UTF-8";
+
 * {
   vertical-align: top;
   font-family: 微軟正黑體;
   backface-visibility: hidden;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -27,15 +29,18 @@ button {
   cursor: pointer;
   vertical-align: middle;
 }
+
 button:hover {
   background-color: #585858;
   color: white;
 }
+
 button i {
   margin-left: 5px;
   margin-right: 0px;
   margin-top: 3px;
 }
+
 button i.fa-circle {
   color: #cc0000;
 }
@@ -47,16 +52,20 @@ button i.fa-circle {
   cursor: pointer;
   transition: 0.3s;
 }
+
 .notes_list li:hover {
   background-color: #e1e1e1;
 }
+
 .notes_list li.playing {
   background-color: #d5d5d5;
 }
+
 .notes_list li .time {
   font-size: 8px;
   opacity: 0.3;
 }
+
 .notes_list li .num {
   font-size: 16px;
 }
@@ -75,11 +84,13 @@ button i.fa-circle {
   display: inline-block;
   margin-bottom: 30px;
 }
+
 .keyboard .pianokey {
   display: inline-block;
   position: relative;
   cursor: pointer;
 }
+
 .keyboard .pianokey .label {
   position: absolute;
   color: rgba(88, 88, 88, 0.5);
@@ -88,10 +99,12 @@ button i.fa-circle {
   transform: translateX(-50%);
   font-size: 8px;
 }
+
 .keyboard .white.playing {
   background-color: #d5d5d5;
   transform: translate(0px, 0px);
 }
+
 .keyboard .white {
   width: 44px;
   height: 300px;
@@ -99,10 +112,12 @@ button i.fa-circle {
   transform: translate(-3px, -3px);
   transition: 0.1s;
 }
+
 .keyboard .white:hover {
   transform: translate(0px, 0px);
   background-color: #eee;
 }
+
 .keyboard .black {
   position: absolute;
   top: 0;
@@ -115,11 +130,17 @@ button i.fa-circle {
   transform: translate(-3px, -3px);
   transition: 0.1s;
 }
+
 .keyboard .black:hover {
   transform: translate(0px, 0px);
   background-color: #3f3f3f;
 }
+
 .keyboard .black.playing {
   background-color: #727272;
   transform: translate(0px, 0px);
+}
+
+nav {
+  background-color: #000;
 }

@@ -201,10 +201,46 @@ section#section_about .introduction p {
     0px 1px rgba(255, 255, 255, 0.8);
 }
 
-#section_skills .col-sm-6 .col-sm-6 .progress-line span {
+#section_skills .col-sm-6 .col-sm-6 .progress-line .htmlnum {
+  height: 100%;
+  width: 90%;
+  background-color: #e44f26;
+  z-index: 99;
+}
+
+#section_skills .col-sm-6 .col-sm-6 .progress-line .cssnum {
   height: 100%;
   width: 80%;
-  background-color: #6665ee;
+  background-color: #33a9dc;
+  z-index: 99;
+}
+
+#section_skills .col-sm-6 .col-sm-6 .progress-line .jqnum {
+  height: 100%;
+  width: 70%;
+  background-color: #f7e018;
+  z-index: 99;
+}
+
+#section_skills .col-sm-6 .col-sm-6 .progress-line .bstnum {
+  height: 100%;
+  width: 60%;
+  background-color: #563d7c;
+  z-index: 99;
+}
+
+#section_skills .col-sm-6 .col-sm-6 .progress-line .vuenum {
+  height: 100%;
+  width: 50%;
+  background-color: #00c180;
+  z-index: 99;
+}
+
+#section_skills .col-sm-6 .col-sm-6 .progress-line .mysqlnum {
+  height: 100%;
+  width: 70%;
+  background-color: blue;
+  z-index: 99;
 }
 
 #section_skills .col-sm-6 .col-sm-6 .icon {
